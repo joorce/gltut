@@ -52,8 +52,9 @@
             errors into the OpenGL error queue. After every OpenGL function call, you may want to
             check to see if an error has been added to the queue. This is done with code as
             follows:</para>
-        <programlisting language="cpp">for(GLenum currError = glGetError(); currError != GL_NO_ERROR; currError = glGetError())
-{
+        <programlisting language="cpp">for(GLenum currError = glGetError(); 
+            currError != GL_NO_ERROR; 
+            currError = glGetError()) {
   //Do something with `currError`.
 }</programlisting>
         <para>It would be very tedious to put this after every function. But since the errors are

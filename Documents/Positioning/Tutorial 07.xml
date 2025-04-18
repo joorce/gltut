@@ -87,7 +87,7 @@
                 <title>Full Vertex Transformation Pipeline</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="TransformPipeline.svg"/>
+                        <imagedata fileref="TransformPipeline.svg" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -100,7 +100,7 @@
                 <title>World Space Scene</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="World%20Scene.png"/>
+                        <imagedata fileref="World%20Scene.png" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -200,17 +200,19 @@
                 also local to an object. For example:</para>
             <example>
                 <title>Window Resizing</title>
-                <programlisting language="cpp">void reshape (int w, int h)
-{
+                <programlisting language="cpp">void reshape (int w, int h) {
     glutil::MatrixStack persMatrix;
     persMatrix.Perspective(45.0f, (w / (float)h), g_fzNear, g_fzFar);
     
     glUseProgram(UniformColor.theProgram);
-    glUniformMatrix4fv(UniformColor.cameraToClipMatrixUnif, 1, GL_FALSE, glm::value_ptr(persMatrix.Top()));
+    glUniformMatrix4fv(UniformColor.cameraToClipMatrixUnif, 1, 
+        GL_FALSE, glm::value_ptr(persMatrix.Top()));
     glUseProgram(ObjectColor.theProgram);
-    glUniformMatrix4fv(ObjectColor.cameraToClipMatrixUnif, 1, GL_FALSE, glm::value_ptr(persMatrix.Top()));
+    glUniformMatrix4fv(ObjectColor.cameraToClipMatrixUnif, 1, 
+        GL_FALSE, glm::value_ptr(persMatrix.Top()));
     glUseProgram(UniformColorTint.theProgram);
-    glUniformMatrix4fv(UniformColorTint.cameraToClipMatrixUnif, 1, GL_FALSE, glm::value_ptr(persMatrix.Top()));
+    glUniformMatrix4fv(UniformColorTint.cameraToClipMatrixUnif, 1, 
+        GL_FALSE, glm::value_ptr(persMatrix.Top()));
     glUseProgram(0);
     
     glViewport(0, 0, (GLsizei) w, (GLsizei) h);
@@ -243,8 +245,7 @@ uniform mat4 cameraToClipMatrix;
 uniform mat4 worldToCameraMatrix;
 uniform mat4 modelToWorldMatrix;
 
-void main()
-{
+void main() {
     vec4 temp = modelToWorldMatrix * position;
     temp = worldToCameraMatrix * temp;
     gl_Position = cameraToClipMatrix * temp;
@@ -283,14 +284,18 @@ void main()
                 <programlisting language="cpp">const glm::vec3 &amp;camPos = ResolveCamPosition();
 
 glutil::MatrixStack camMatrix;
-camMatrix.SetMatrix(CalcLookAtMatrix(camPos, g_camTarget, glm::vec3(0.0f, 1.0f, 0.0f)));
+camMatrix.SetMatrix(
+    CalcLookAtMatrix(camPos, g_camTarget, glm::vec3(0.0f, 1.0f, 0.0f)));
 
 glUseProgram(UniformColor.theProgram);
-glUniformMatrix4fv(UniformColor.worldToCameraMatrixUnif, 1, GL_FALSE, glm::value_ptr(camMatrix.Top()));
+glUniformMatrix4fv(UniformColor.worldToCameraMatrixUnif, 1, 
+    GL_FALSE, glm::value_ptr(camMatrix.Top()));
 glUseProgram(ObjectColor.theProgram);
-glUniformMatrix4fv(ObjectColor.worldToCameraMatrixUnif, 1, GL_FALSE, glm::value_ptr(camMatrix.Top()));
+glUniformMatrix4fv(ObjectColor.worldToCameraMatrixUnif, 1, 
+    GL_FALSE, glm::value_ptr(camMatrix.Top()));
 glUseProgram(UniformColorTint.theProgram);
-glUniformMatrix4fv(UniformColorTint.worldToCameraMatrixUnif, 1, GL_FALSE, glm::value_ptr(camMatrix.Top()));
+glUniformMatrix4fv(UniformColorTint.worldToCameraMatrixUnif, 1, 
+    GL_FALSE, glm::value_ptr(camMatrix.Top()));
 glUseProgram(0);</programlisting>
             </example>
             <para>The function <function>ResolveCamPosition</function> computes the camera position,
@@ -327,7 +332,7 @@ glUseProgram(0);</programlisting>
                 <title>Spherical Coordinates</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="Coord_system_SZ_0.svg" />
+                        <imagedata fileref="Coord_system_SZ_0.svg" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -337,8 +342,7 @@ glUseProgram(0);</programlisting>
                 coordinates is implemented in <function>ResolveCamPosition.</function></para>
             <example>
                 <title>Spherical to Euclidean Transform</title>
-                <programlisting language="cpp">glm::vec3 ResolveCamPosition()
-{
+                <programlisting language="cpp">glm::vec3 ResolveCamPosition() {
     glutil::MatrixStack tempMat;
     
     float phi = Framework::DegToRad(g_sphereCamRelPos.x);
@@ -404,7 +408,8 @@ glUseProgram(0);</programlisting>
 modelMatrix.Scale(glm::vec3(100.0f, 1.0f, 100.0f));
 
 glUseProgram(UniformColor.theProgram);
-glUniformMatrix4fv(UniformColor.modelToWorldMatrixUnif, 1, GL_FALSE, glm::value_ptr(modelMatrix.Top()));
+glUniformMatrix4fv(UniformColor.modelToWorldMatrixUnif, 1, 
+    GL_FALSE, glm::value_ptr(modelMatrix.Top()));
 glUniform4f(UniformColor.baseColorUnif, 0.302f, 0.416f, 0.0589f, 1.0f);
 g_pPlaneMesh->Render();
 glUseProgram(0);</programlisting>
@@ -417,10 +422,8 @@ glUseProgram(0);</programlisting>
                 function.</para>
             <example>
                 <title>DrawForest Function</title>
-                <programlisting language="cpp">void DrawForest(glutil::MatrixStack &amp;modelMatrix)
-{
-    for(int iTree = 0; iTree &lt; ARRAY_COUNT(g_forest); iTree++)
-    {
+                <programlisting language="cpp">void DrawForest(glutil::MatrixStack &amp;modelMatrix) {
+    for(int iTree = 0; iTree &lt; ARRAY_COUNT(g_forest); iTree++) {
         const TreeData &amp;currTree = g_forest[iTree];
         
         glutil::PushStack push(modelMatrix);
@@ -569,7 +572,7 @@ glEnable(GL_DEPTH_TEST);</programlisting>
             <title>Triangle Fan</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="TriangleFan.svg" />
+                    <imagedata fileref="TriangleFan.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -589,7 +592,7 @@ glEnable(GL_DEPTH_TEST);</programlisting>
             <title>Triangle Strip</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata  fileref="TriangleStrip.svg"/>
+                    <imagedata  fileref="TriangleStrip.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -608,7 +611,7 @@ glEnable(GL_DEPTH_TEST);</programlisting>
             <title>Triangle Strips with Winding Order</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata  fileref="StripWindingOrder.svg"/>
+                    <imagedata  fileref="StripWindingOrder.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -657,16 +660,14 @@ glEnable(GL_DEPTH_TEST);</programlisting>
 
 layout(location = 0) in vec4 position;
 
-layout(std140) uniform GlobalMatrices
-{
+layout(std140) uniform GlobalMatrices {
     mat4 cameraToClipMatrix;
     mat4 worldToCameraMatrix;
 };
 
 uniform mat4 modelToWorldMatrix;
 
-void main()
-{
+void main() {
     vec4 temp = modelToWorldMatrix * position;
     temp = worldToCameraMatrix * temp;
     gl_Position = cameraToClipMatrix * temp;
@@ -804,13 +805,13 @@ glBindBuffer(GL_UNIFORM_BUFFER, 0);</programlisting>
                 without filling in a default matrix. The reshape function is as follows:</para>
             <example>
                 <title>UBO-based Perspective Matrix</title>
-                <programlisting language="cpp">void reshape (int w, int h)
-{
+                <programlisting language="cpp">void reshape (int w, int h) {
     glutil::MatrixStack persMatrix;
     persMatrix.Perspective(45.0f, (w / (float)h), g_fzNear, g_fzFar);
     
     glBindBuffer(GL_UNIFORM_BUFFER, g_GlobalMatricesUBO);
-    glBufferSubData(GL_UNIFORM_BUFFER, 0, sizeof(glm::mat4), glm::value_ptr(persMatrix.Top()));
+    glBufferSubData(GL_UNIFORM_BUFFER, 0, sizeof(glm::mat4), 
+        glm::value_ptr(persMatrix.Top()));
     glBindBuffer(GL_UNIFORM_BUFFER, 0);
     
     glViewport(0, 0, (GLsizei) w, (GLsizei) h);
@@ -827,10 +828,12 @@ glBindBuffer(GL_UNIFORM_BUFFER, 0);</programlisting>
                 <programlisting language="cpp">const glm::vec3 &amp;camPos = ResolveCamPosition();
 
 glutil::MatrixStack camMatrix;
-camMatrix.SetMatrix(CalcLookAtMatrix(camPos, g_camTarget, glm::vec3(0.0f, 1.0f, 0.0f)));
+camMatrix.SetMatrix(CalcLookAtMatrix(camPos, g_camTarget, 
+    glm::vec3(0.0f, 1.0f, 0.0f)));
 
 glBindBuffer(GL_UNIFORM_BUFFER, g_GlobalMatricesUBO);
-glBufferSubData(GL_UNIFORM_BUFFER, sizeof(glm::mat4), sizeof(glm::mat4), glm::value_ptr(camMatrix.Top()));
+glBufferSubData(GL_UNIFORM_BUFFER, sizeof(glm::mat4), 
+    sizeof(glm::mat4), glm::value_ptr(camMatrix.Top()));
 glBindBuffer(GL_UNIFORM_BUFFER, 0);</programlisting>
             </example>
             <para>The world-to-camera matrix is the second matrix, so we start the upload at the end
@@ -857,7 +860,7 @@ glBindBuffer(GL_UNIFORM_BUFFER, 0);</programlisting>
                 <title>Uniform Buffer and Block Binding Points</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="UBOContextBinding.svg" />
+                        <imagedata fileref="UBOContextBinding.svg" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -975,8 +978,7 @@ uniform mat4 cameraToClipMatrix;
 uniform mat4 worldToCameraMatrix;
 uniform mat4 modelToWorldMatrix;
 
-void main()
-{
+void main() {
     vec4 worldPos = modelToWorldMatrix * position;
     vec4 cameraPos = worldToCameraMatrix * worldPos;
     gl_Position = cameraToClipMatrix * cameraPos;

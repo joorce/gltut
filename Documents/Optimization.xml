@@ -69,8 +69,7 @@
         <para>The most significant 2 bits of each integer is the Alpha. The next 10 bits are the
             Blue, then Green, and finally Red. Make note of the fact that it is reversed. It is
             equivalent to this bitfield struct in C:</para>
-        <programlisting language="cpp">struct RGB10_A2
-{
+        <programlisting language="cpp">struct RGB10_A2 {
   unsigned int alpha    : 2;
   unsigned int blue     : 10;
   unsigned int green    : 10;
@@ -568,8 +567,7 @@ vec3 tanSpaceNormal = vec3(norm2d, sqrt(1.0 - dot(norm2d, norm2d)));</programlis
                 avoided. Furthermore, attributes in the same buffer should be interleaved with one
                 another whenever possible.</para>
             <para>Consider an array of structs in C++:</para>
-            <programlisting>struct Vertex
-{
+            <programlisting>struct Vertex {
   float position[3];
   GLubyte color[4];
   GLushort texCoord[2];

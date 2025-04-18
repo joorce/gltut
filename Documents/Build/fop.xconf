@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<fop version="1.0">
+  <renderers>
+    <renderer mime="application/pdf">
+      <fonts>
+
+        <!-- IBM Plex Sans -->
+        <font embed-url="/usr/share/fonts/truetype/ibm-plex/IBMPlexSans-Regular.ttf" embedding-mode="subset">
+          <font-triplet name="IBM Plex Sans" style="normal" weight="normal"/>
+        </font>
+        <font embed-url="/usr/share/fonts/truetype/ibm-plex/IBMPlexSans-Bold.ttf" embedding-mode="subset">
+          <font-triplet name="IBM Plex Sans" style="normal" weight="bold"/>
+        </font>
+        <font embed-url="/usr/share/fonts/truetype/ibm-plex/IBMPlexSans-Italic.ttf" embedding-mode="subset">
+          <font-triplet name="IBM Plex Sans" style="italic" weight="normal"/>
+        </font>
+        <font embed-url="/usr/share/fonts/truetype/ibm-plex/IBMPlexSans-BoldItalic.ttf" embedding-mode="subset">
+          <font-triplet name="IBM Plex Sans" style="italic" weight="bold"/>
+        </font>
+
+        <!-- IBM Plex Serif -->
+        <font embed-url="/usr/share/fonts/truetype/ibm-plex/IBMPlexSerif-Regular.ttf" embedding-mode="subset">
+          <font-triplet name="IBM Plex Serif" style="normal" weight="normal"/>
+        </font>
+        <font embed-url="/usr/share/fonts/truetype/ibm-plex/IBMPlexSerif-Bold.ttf" embedding-mode="subset">
+          <font-triplet name="IBM Plex Serif" style="normal" weight="bold"/>
+        </font>
+        <font embed-url="/usr/share/fonts/truetype/ibm-plex/IBMPlexSerif-Italic.ttf" embedding-mode="subset">
+          <font-triplet name="IBM Plex Serif" style="italic" weight="normal"/>
+        </font>
+        <font embed-url="/usr/share/fonts/truetype/ibm-plex/IBMPlexSerif-BoldItalic.ttf" embedding-mode="subset">
+          <font-triplet name="IBM Plex Serif" style="italic" weight="bold"/>
+        </font>
+
+        <!-- IBM Plex Mono -->
+        <font embed-url="/usr/share/fonts/truetype/ibm-plex/IBMPlexMono-Regular.ttf" embedding-mode="subset">
+          <font-triplet name="IBM Plex Mono" style="normal" weight="normal"/>
+        </font>
+        <font embed-url="/usr/share/fonts/truetype/ibm-plex/IBMPlexMono-Bold.ttf" embedding-mode="subset">
+          <font-triplet name="IBM Plex Mono" style="normal" weight="bold"/>
+        </font>
+        <font embed-url="/usr/share/fonts/truetype/ibm-plex/IBMPlexMono-Italic.ttf" embedding-mode="subset">
+          <font-triplet name="IBM Plex Mono" style="italic" weight="normal"/>
+        </font>
+        <font embed-url="/usr/share/fonts/truetype/ibm-plex/IBMPlexMono-BoldItalic.ttf" embedding-mode="subset">
+          <font-triplet name="IBM Plex Mono" style="italic" weight="bold"/>
+        </font>
+
+        <!-- Noto Serif -->
+        <font embed-url="/usr/share/fonts/truetype/noto/NotoSerif-Regular.ttf" embedding-mode="subset">
+          <font-triplet name="Noto Serif" style="normal" weight="normal"/>
+        </font>
+        <font embed-url="/usr/share/fonts/truetype/noto/NotoSerif-Bold.ttf" embedding-mode="subset">
+          <font-triplet name="Noto Serif" style="normal" weight="bold"/>
+        </font>
+        <font embed-url="/usr/share/fonts/truetype/noto/NotoSerif-Italic.ttf" embedding-mode="subset">
+          <font-triplet name="Noto Serif" style="italic" weight="normal"/>
+        </font>
+        <font embed-url="/usr/share/fonts/truetype/noto/NotoSerif-BoldItalic.ttf" embedding-mode="subset">
+          <font-triplet name="Noto Serif" style="italic" weight="bold"/>
+        </font>
+
+        <!-- Noto Sans -->
+        <font embed-url="/usr/share/fonts/truetype/noto/NotoSans-Regular.ttf" embedding-mode="subset">
+          <font-triplet name="Noto Sans" style="normal" weight="normal"/>
+        </font>
+        <font embed-url="/usr/share/fonts/truetype/noto/NotoSans-Bold.ttf" embedding-mode="subset">
+          <font-triplet name="Noto Sans" style="normal" weight="bold"/>
+        </font>
+        <font embed-url="/usr/share/fonts/truetype/noto/NotoSans-Italic.ttf" embedding-mode="subset">
+          <font-triplet name="Noto Sans" style="italic" weight="normal"/>
+        </font>
+        <font embed-url="/usr/share/fonts/truetype/noto/NotoSans-BoldItalic.ttf" embedding-mode="subset">
+          <font-triplet name="Noto Sans" style="italic" weight="bold"/>
+        </font>
+      </fonts>
+    </renderer>
+  </renderers>
+</fop>
+

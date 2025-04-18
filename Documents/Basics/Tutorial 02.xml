@@ -34,8 +34,7 @@
 
 out vec4 outputColor;
 
-void main()
-{
+void main() {
     float lerpValue = gl_FragCoord.y / 500.0f;
     
     outputColor = mix(vec4(1.0f, 1.0f, 1.0f, 1.0f),
@@ -76,7 +75,7 @@ void main()
             <title>Fragment Position</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="FragmentPosition.png"/>
+                    <imagedata fileref="FragmentPosition.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -145,7 +144,7 @@ void main()
                 <title>Vertex Array Memory Map</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="MemoryDiagram.svg"/>
+                        <imagedata fileref="MemoryDiagram.svg" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -162,12 +161,12 @@ void main()
                 before:</para>
             <example>
                 <title>Buffer Object Initialization</title>
-                <programlisting language="cpp"><![CDATA[void InitializeVertexBuffer()
-{
+                <programlisting language="cpp"><![CDATA[void InitializeVertexBuffer() {
     glGenBuffers(1, &vertexBufferObject);
     
     glBindBuffer(GL_ARRAY_BUFFER, vertexBufferObject);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(vertexData), vertexData, GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, 
+        sizeof(vertexData), vertexData, GL_STATIC_DRAW);
     glBindBuffer(GL_ARRAY_BUFFER, 0);
 }]]></programlisting>
             </example>
@@ -187,8 +186,7 @@ void main()
             <para>This is done as follows:</para>
             <example>
                 <title>Rendering the Scene</title>
-                <programlisting language="cpp"><![CDATA[void display()
-{
+                <programlisting language="cpp"><![CDATA[void display() {
     glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
     glClear(GL_COLOR_BUFFER_BIT);
     
@@ -263,10 +261,8 @@ float *colorAttribArray[4] = (float *[4])(&(bufferObject + 48));]]></programlist
                         <function>glDrawArrays</function> would be implemented as follows:</para>
                 <example>
                     <title>Draw Arrays Implementation</title>
-                    <programlisting language="cpp"><![CDATA[void glDrawArrays(GLenum type, GLint start, GLint count)
-{
-    for(GLint element = start; element < start + count; element++)
-    {
+                    <programlisting language="cpp"><![CDATA[void glDrawArrays(GLenum type, GLint start, GLint count) {
+    for(GLint element = start; element < start + count; element++) {
         VertexShader(positionAttribArray[element], colorAttribArray[element]);
     }
 }]]></programlisting>
@@ -305,8 +301,7 @@ layout (location = 1) in vec4 color;
 
 smooth out vec4 theColor;
 
-void main()
-{
+void main() {
     gl_Position = position;
     theColor = color;
 }]]></programlisting>
@@ -350,8 +345,7 @@ smooth in vec4 theColor;
 
 out vec4 outputColor;
 
-void main()
-{
+void main() {
     outputColor = theColor;
 }]]></programlisting>
             </example>
@@ -428,7 +422,7 @@ void main()
                 <title>Interpolated Vertex Colors</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="VertexColors.png" contentwidth="3in"/>
+                        <imagedata align="center" fileref="VertexColors.png" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>

@@ -50,7 +50,7 @@
             <title>Basic Impostor</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="Basic%20Impostor.png"/>
+                    <imagedata fileref="Basic%20Impostor.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -101,25 +101,23 @@
                 interesting. The vertex shader looks like this:</para>
             <example>
                 <title>Basic Impostor Vertex Shader</title>
-                <programlisting language="glsl">#version 330
+                <programlisting language="glsl">
+#version 330
 
 layout(std140) uniform;
 
 out vec2 mapping;
 
-uniform Projection
-{
+uniform Projection {
 	mat4 cameraToClipMatrix;
 };
 
 uniform float sphereRadius;
 uniform vec3 cameraSpherePos;
 
-void main()
-{
+void main() {
     vec2 offset;
-    switch(gl_VertexID)
-    {
+    switch(gl_VertexID) {
     case 0:
         //Bottom-left
         mapping = vec2(-1.0, -1.0);
@@ -146,7 +144,8 @@ void main()
     cameraCornerPos.xy += offset;
     
     gl_Position = cameraToClipMatrix * cameraCornerPos;
-}</programlisting>
+}
+</programlisting>
             </example>
             <para>Notice anything missing? There are no input variables declared anywhere in this
                 vertex shader.</para>
@@ -186,10 +185,10 @@ void main()
             <para>Here are the salient new parts of the fragment shader for impostors:</para>
             <example>
                 <title>Basic Impostor Fragment Shader</title>
-                <programlisting language="glsl">in vec2 mapping;
+                <programlisting language="glsl">
+in vec2 mapping;
 
-void Impostor(out vec3 cameraPos, out vec3 cameraNormal)
-{
+void Impostor(out vec3 cameraPos, out vec3 cameraNormal) {
     float lensqr = dot(mapping, mapping);
     if(lensqr > 1.0)
         discard;
@@ -198,16 +197,14 @@ void Impostor(out vec3 cameraPos, out vec3 cameraNormal)
     cameraPos = (cameraNormal * sphereRadius) + cameraSpherePos;
 }
 
-void main()
-{
+void main() {
     vec3 cameraPos;
     vec3 cameraNormal;
     
     Impostor(cameraPos, cameraNormal);
     
     vec4 accumLighting = Mtl.diffuseColor * Lgt.ambientIntensity;
-    for(int light = 0; light &lt; numberOfLights; light++)
-    {
+    for(int light = 0; light &lt; numberOfLights; light++) {
         accumLighting += ComputeLighting(Lgt.lights[light],
             cameraPos, cameraNormal);
     }
@@ -429,11 +426,9 @@ void main()
                 <title>Ray Traced Impostor Square</title>
                 <programlisting language="glsl">const float g_boxCorrection = 1.5;
 
-void main()
-{
+void main() {
     vec2 offset;
-    switch(gl_VertexID)
-    {
+    switch(gl_VertexID) {
     case 0:
         //Bottom-left
         mapping = vec2(-1.0, -1.0) * g_boxCorrection;
@@ -460,7 +455,8 @@ void main()
     cameraCornerPos.xy += offset * g_boxCorrection;
     
     gl_Position = cameraToClipMatrix * cameraCornerPos;
-}</programlisting>
+}
+</programlisting>
             </example>
             <para>We have expanded the size of the square by 50%. What is the purpose of this? Well,
                 let's look at our 2D image again.</para>
@@ -491,7 +487,7 @@ void main()
             <title>Bad Intersection</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="Bad%20Impostor%20Intersection.png"/>
+                    <imagedata fileref="Bad%20Impostor%20Intersection.png"  contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -591,8 +587,10 @@ gl_FragDepth = ((gl_DepthRange.diff * ndcDepth) +
                 to render.</para>
             <example>
                 <title>Impostor Geometry Creation</title>
-                <programlisting language="cpp">glBindBuffer(GL_ARRAY_BUFFER, g_imposterVBO);
-glBufferData(GL_ARRAY_BUFFER, NUMBER_OF_SPHERES * 4 * sizeof(float), NULL, GL_STREAM_DRAW);
+                <programlisting language="cpp">
+glBindBuffer(GL_ARRAY_BUFFER, g_imposterVBO);
+glBufferData(GL_ARRAY_BUFFER, NUMBER_OF_SPHERES * 4 * sizeof(float), 
+             NULL, GL_STREAM_DRAW);
 
 glGenVertexArrays(1, &amp;g_imposterVAO);
 glBindVertexArray(g_imposterVAO);
@@ -621,11 +619,12 @@ glBindBuffer(GL_ARRAY_BUFFER, 0);</programlisting>
                     <glossterm>interleaving</glossterm>. It is a very useful technique; indeed, for
                 performance reasons, data should generally be interleaved where possible. One thing
                 that it allows us to do is build our vertex data based on a struct:</para>
-            <programlisting language="cpp">struct VertexData
-{
+            <programlisting language="cpp">
+struct VertexData {
     glm::vec3 cameraPosition;
     float sphereRadius;
-};</programlisting>
+};
+</programlisting>
             <para>Our vertex array object perfectly describes the arrangement of data in an array of
                     <classname>VertexData</classname> objects. So when we upload our positions and
                 radii to the buffer object, we simply create an array of these structs, fill in the
@@ -671,22 +670,22 @@ glBindVertexArray(0);</programlisting>
                 us:</para>
             <example>
                 <title>Vertex Shader for Points</title>
-                <programlisting language="glsl">#version 330
+                <programlisting language="glsl">
+#version 330
 
 layout(location = 0) in vec3 cameraSpherePos;
 layout(location = 1) in float sphereRadius;
 
-out VertexData
-{
+out VertexData {
     vec3 cameraSpherePos;
     float sphereRadius
 } outData;
 
-void main()
-{
+void main() {
 	outData.cameraSpherePos = cameraSpherePos;
     outData.sphereRadius = sphereRadius;
-}</programlisting>
+}
+</programlisting>
             </example>
             <para><classname>VertexData</classname> is not a struct definition, though it does look
                 like one. It is an <glossterm>interface block</glossterm> definition. Uniform blocks
@@ -703,30 +702,29 @@ void main()
                 shader.</para>
             <example>
                 <title>Geometry Shader Definitions</title>
-                <programlisting language="glsl">#version 330
+                <programlisting language="glsl">
+#version 330
 #extension GL_EXT_gpu_shader4 : enable
 
 layout(std140) uniform;
 layout(points) in;
 layout(triangle_strip, max_vertices=4) out;
 
-uniform Projection
-{
+uniform Projection {
     mat4 cameraToClipMatrix;
 };
 
-in VertexData
-{
+in VertexData {
     vec3 cameraSpherePos;
     float sphereRadius;
 } vert[];
 
-out FragData
-{
+out FragData {
     flat vec3 cameraSpherePos;
     flat float sphereRadius;
     smooth vec2 mapping;
-};</programlisting>
+};
+</programlisting>
             </example>
             <note>
                 <para>The <literal>#extension</literal> line exists to fix a compiler bug for
@@ -763,15 +761,20 @@ out FragData
                 triangle strip:</para>
             <example>
                 <title>Geometry Shader Vertex Computation</title>
-                <programlisting language="glsl">//Bottom-left
+                <programlisting language="glsl">
+//Bottom-left
 mapping = vec2(-1.0, -1.0) * g_boxCorrection;
 cameraSpherePos = vec3(vert[0].cameraSpherePos);
 sphereRadius = vert[0].sphereRadius;
+
 cameraCornerPos = vec4(vert[0].cameraSpherePos, 1.0);
-cameraCornerPos.xy += vec2(-vert[0].sphereRadius, -vert[0].sphereRadius) * g_boxCorrection;
+cameraCornerPos.xy += 
+    vec2(-vert[0].sphereRadius, -vert[0].sphereRadius) * g_boxCorrection;
+
 gl_Position = cameraToClipMatrix * cameraCornerPos;
 gl_PrimitiveID = gl_PrimitiveIDIn;
-EmitVertex();</programlisting>
+EmitVertex();
+</programlisting>
             </example>
             <para>This code is followed by three more of these, using different mapping and offset
                 values for the different corners of the square. The
@@ -798,8 +801,8 @@ EmitVertex();</programlisting>
             <para>And speaking of the fragment shader, it's time to have a look at that.</para>
             <example>
                 <title>Fragment Shader Changes</title>
-                <programlisting language="glsl">in FragData
-{
+                <programlisting language="glsl">
+in FragData {
     flat vec3 cameraSpherePos;
     flat float sphereRadius;
     smooth vec2 mapping;
@@ -809,8 +812,7 @@ out vec4 outputColor;
 
 layout(std140) uniform;
 
-struct MaterialEntry
-{
+struct MaterialEntry {
     vec4 diffuseColor;
     vec4 specularColor;
     vec4 specularShininess;        //ATI Array Bug fix. Not really a vec4.
@@ -818,10 +820,10 @@ struct MaterialEntry
 
 const int NUMBER_OF_SPHERES = 4;
 
-uniform Material
-{
+uniform Material {
     MaterialEntry material[NUMBER_OF_SPHERES];
-} Mtl;</programlisting>
+} Mtl;
+</programlisting>
             </example>
             <para>The input interface is just the mirror of the output from the geometry shader.
                 What's more interesting is what happened to our material blocks.</para>

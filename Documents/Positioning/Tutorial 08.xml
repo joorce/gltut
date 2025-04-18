@@ -52,7 +52,7 @@
             <title>Gimbal Lock Project</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="Three%20Gimbal%20Array.png"/>
+                    <imagedata fileref="Three%20Gimbal%20Array.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -73,7 +73,7 @@
             <title>Parallel Gimbals</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="In%20Gimbal%20Lock.png"/>
+                    <imagedata fileref="In%20Gimbal%20Lock.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -102,8 +102,7 @@
             <para>The rendering function looks like this:</para>
             <example>
                 <title>Gimbal Lock Display Code</title>
-                <programlisting language="cpp">void display()
-{
+                <programlisting language="cpp">void display() {
     glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
     glClearDepth(1.0f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -122,7 +121,8 @@
     currMatrix.RotateX(-90);
     //Set the base color for this object.
     glUniform4f(baseColorUnif, 1.0, 1.0, 1.0, 1.0);
-    glUniformMatrix4fv(modelToCameraMatrixUnif, 1, GL_FALSE, glm::value_ptr(currMatrix.Top()));
+    glUniformMatrix4fv(modelToCameraMatrixUnif, 1, 
+        GL_FALSE, glm::value_ptr(currMatrix.Top()));
     
     g_pObject->Render("tint");
     
@@ -259,15 +259,14 @@
                 <title>Quaternion YPR Project</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="Quaternion%20YPR.png"/>
+                        <imagedata fileref="Quaternion%20YPR.png" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
             <para>The rendering code is pretty straightforward.</para>
             <example>
                 <title>Quaternion YPR Display</title>
-                <programlisting language="cpp">void display()
-{
+                <programlisting language="cpp">void display() {
     glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
     glClearDepth(1.0f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -281,7 +280,8 @@
     currMatrix.RotateX(-90);
     //Set the base color for this object.
     glUniform4f(baseColorUnif, 1.0, 1.0, 1.0, 1.0);
-    glUniformMatrix4fv(modelToCameraMatrixUnif, 1, GL_FALSE, glm::value_ptr(currMatrix.Top()));
+    glUniformMatrix4fv(modelToCameraMatrixUnif, 1, 
+        GL_FALSE, glm::value_ptr(currMatrix.Top()));
     
     g_pShip->Render("tint");
     
@@ -301,8 +301,7 @@
                 function.</para>
             <example>
                 <title>OffsetOrientation Function</title>
-                <programlisting language="cpp">void OffsetOrientation(const glm::vec3 &amp;_axis, float fAngDeg)
-{
+                <programlisting language="cpp">void OffsetOrientation(const glm::vec3 &amp;_axis, float fAngDeg) {
     float fAngRad = Framework::DegToRad(fAngDeg);
     
     glm::vec3 axis = glm::normalize(_axis);
@@ -483,7 +482,7 @@
                 <title>Camera Relative Project</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="Camera%20Relative.png"/>
+                        <imagedata fileref="Camera%20Relative.png" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -494,8 +493,7 @@
                 function:</para>
             <example>
                 <title>Camera Relative OffsetOrientation</title>
-                <programlisting language="cpp">void OffsetOrientation(const glm::vec3 &amp;_axis, float fAngDeg)
-{
+                <programlisting language="cpp">void OffsetOrientation(const glm::vec3 &amp;_axis, float fAngDeg) {
     float fAngRad = Framework::DegToRad(fAngDeg);
     
     glm::vec3 axis = glm::normalize(_axis);
@@ -505,8 +503,7 @@
     
     glm::fquat offset(scalar, axis.x, axis.y, axis.z);
     
-    switch(g_iOffset)
-    {
+    switch(g_iOffset) {
     case MODEL_RELATIVE:
         g_orientation = g_orientation * offset;
         break;
@@ -516,7 +513,9 @@
     case CAMERA_RELATIVE:
         {
             const glm::vec3 &amp;camPos = ResolveCamPosition();
-            const glm::mat4 &amp;camMat = CalcLookAtMatrix(camPos, g_camTarget, glm::vec3(0.0f, 1.0f, 0.0f));
+            const glm::mat4 &amp;camMat = 
+                CalcLookAtMatrix(camPos, g_camTarget, 
+                glm::vec3(0.0f, 1.0f, 0.0f));
             
             glm::fquat viewQuat = glm::quat_cast(camMat);
             glm::fquat invViewQuat = glm::conjugate(viewQuat);
@@ -610,8 +609,7 @@
             <para>The linear interpolation code looks like this:</para>
             <example>
                 <title>Quaternion Linear Interpolation</title>
-                <programlisting language="cpp">glm::fquat Lerp(const glm::fquat &amp;v0, const glm::fquat &amp;v1, float alpha)
-{
+                <programlisting language="cpp">glm::fquat Lerp(const glm::fquat &amp;v0, const glm::fquat &amp;v1, float alpha) {
     glm::vec4 start = Vectorize(v0);
     glm::vec4 end = Vectorize(v1);
     glm::vec4 interp = glm::mix(start, end, alpha);
@@ -648,8 +646,7 @@
             <para>The code for slerp is rather complex:</para>
             <example>
                 <title>Spherical Linear Interpolation</title>
-                <programlisting language="cpp">glm::fquat Slerp(const glm::fquat &amp;v0, const glm::fquat &amp;v1, float alpha)
-{
+                <programlisting language="cpp">glm::fquat Slerp(const glm::fquat &amp;v0, const glm::fquat &amp;v1, float alpha) {
     float dot = glm::dot(v0, v1);
     
     const float DOT_THRESHOLD = 0.9995f;

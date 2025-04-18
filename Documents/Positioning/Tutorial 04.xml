@@ -28,8 +28,7 @@
                 has a few new functions that need to be discussed.</para>
             <example>
                 <title>Face Culling Initialization</title>
-                <programlisting language="cpp"><![CDATA[void init()
-{
+                <programlisting language="cpp"><![CDATA[void init() {
     InitializeProgram();
     InitializeVertexBuffer();
     
@@ -103,7 +102,7 @@
                 <title>Orthographic Prism</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="OrthoPrism.png" contentwidth="3in"/>
+                        <imagedata fileref="OrthoPrism.png" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -147,7 +146,7 @@
             <title>2D to 1D Orthographic Projection</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="Ortho2DProjection.svg"  contentwidth="4in"/>
+                    <imagedata fileref="Ortho2DProjection.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
             <caption>
@@ -173,7 +172,7 @@
             <title>2D to 1D Perspective Projection</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="Persp2DProjection.svg"  contentwidth="4in"/>
+                    <imagedata fileref="Persp2DProjection.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -191,7 +190,7 @@
             <title>Viewing Frustum</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="ViewFrustum.svg"  contentwidth="4in"/>
+                    <imagedata fileref="ViewFrustum.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -226,7 +225,7 @@
                 <title>2D to 1D Perspective Projection Diagram</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="PerspDiagram.svg"  contentwidth="4in"/>
+                        <imagedata fileref="PerspDiagram.svg" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
                 <caption>
@@ -453,8 +452,7 @@ uniform float zNear;
 uniform float zFar;
 uniform float frustumScale;
 
-void main()
-{
+void main() {
     vec4 cameraPos = position + vec4(offset.x, offset.y, 0.0, 0.0);
     vec4 clipPos;
     
@@ -511,7 +509,7 @@ glUseProgram(0);]]></programlisting>
                 <title>Perspective Prism</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="PerspectivePrism.png" contentwidth="3in"/>
+                        <imagedata fileref="PerspectivePrism.png" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -659,8 +657,7 @@ smooth out vec4 theColor;
 uniform vec2 offset;
 uniform mat4 perspectiveMatrix;
 
-void main()
-{
+void main() {
     vec4 cameraPos = position + vec4(offset.x, offset.y, 0.0, 0.0);
     
     gl_Position = perspectiveMatrix * cameraPos;
@@ -744,7 +741,7 @@ glUseProgram(0);]]></programlisting>
             <title>Perspective Matrix</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="MatrixPerspective.png" contentwidth="3in"/>
+                    <imagedata fileref="MatrixPerspective.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -760,7 +757,7 @@ glUseProgram(0);]]></programlisting>
             <title>Bad Aspect Ratio</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="MatrixPerspectiveSkew.png" contentwidth="5in"/>
+                    <imagedata fileref="MatrixPerspectiveSkew.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -779,8 +776,7 @@ glUseProgram(0);]]></programlisting>
             be this:</para>
         <example>
             <title>Square-only Viewport</title>
-            <programlisting language="cpp"><![CDATA[void reshape (int w, int h)
-{
+            <programlisting language="cpp"><![CDATA[void reshape (int w, int h) {
     if(w < h)
         glViewport(0, 0, (GLsizei) w, (GLsizei) w);
     else
@@ -812,7 +808,7 @@ glUseProgram(0);]]></programlisting>
             <title>Widescreen Aspect Ratio Frustum</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="RectViewFrustum.svg"  contentwidth="5in"/>
+                    <imagedata fileref="RectViewFrustum.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -832,8 +828,7 @@ glUseProgram(0);]]></programlisting>
                 <function>reshape</function> function.</para>
         <example>
             <title>Reshape with Aspect Ratio</title>
-            <programlisting language="cpp"><![CDATA[void reshape (int w, int h)
-{
+            <programlisting language="cpp"><![CDATA[void reshape (int w, int h) {
     perspectiveMatrix[0] = fFrustumScale / (w / (float)h);
     perspectiveMatrix[5] = fFrustumScale;
     

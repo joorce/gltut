@@ -129,7 +129,7 @@
             <title>Coordinate System Translation in 2D</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="TranslationTransform.svg" />
+                    <imagedata fileref="TranslationTransform.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -176,8 +176,7 @@
             in action.</para>
         <example>
             <title>Translation Shader Initialization</title>
-            <programlisting language="cpp">void InitializeProgram()
-{
+            <programlisting language="cpp">void InitializeProgram() {
     std::vector&lt;GLuint> shaderList;
     
     shaderList.push_back(Framework::LoadShader(GL_VERTEX_SHADER,
@@ -229,8 +228,7 @@
         <para>The new <varname>fFrustumScale</varname> is computed with this code:</para>
         <example>
             <title>Frustum Scale Computation</title>
-            <programlisting language="cpp">float CalcFrustumScale(float fFovDeg)
-{
+            <programlisting language="cpp">float CalcFrustumScale(float fFovDeg) {
     const float degToRad = 3.14159f * 2.0f / 360.0f;
     float fFovRad = fFovDeg * degToRad;
     return 1.0f / tan(fFovRad / 2.0f);
@@ -249,8 +247,7 @@ const float fFrustumScale = CalcFrustumScale(45.0f);</programlisting>
             transformation matrix, based on the current elapsed time, with this function:</para>
         <example>
             <title>Translation Matrix Generation</title>
-            <programlisting language="cpp">glm::mat4 ConstructMatrix(float fElapsedTime)
-{
+            <programlisting language="cpp">glm::mat4 ConstructMatrix(float fElapsedTime) {
     glm::mat4 theMat(1.0f);
     
     theMat[3] = glm::vec4(CalcOffset(fElapsedTime), 1.0f);
@@ -270,7 +267,7 @@ const float fFrustumScale = CalcFrustumScale(45.0f);</programlisting>
             <title>Translation Project</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="Translations.png"/>
+                    <imagedata fileref="Translations.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -285,7 +282,7 @@ const float fFrustumScale = CalcFrustumScale(45.0f);</programlisting>
             <title>Coordinate System Scaling in 2D</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="ScaleTransform.svg" />
+                    <imagedata fileref="ScaleTransform.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -344,15 +341,14 @@ const float fFrustumScale = CalcFrustumScale(45.0f);</programlisting>
             <title>Scale Project</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="Scales.png"/>
+                    <imagedata fileref="Scales.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
         <para>Other than the way the tutorial builds its matrices, there is no difference between
             this tutorial project and the previous one. The matrix building code works as
             follows:</para>
-        <programlisting language="cpp">glm::mat4 ConstructMatrix(float fElapsedTime)
-{
+        <programlisting language="cpp">glm::mat4 ConstructMatrix(float fElapsedTime) {
     glm::vec3 theScale = CalcScale(fElapsedTime);
     glm::mat4 theMat(1.0f);
     theMat[0].x = theScale.x;
@@ -418,7 +414,7 @@ const float fFrustumScale = CalcFrustumScale(45.0f);</programlisting>
             <title>Coordinate Rotation in 2D</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="RotationTransform.svg" />
+                    <imagedata fileref="RotationTransform.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -504,15 +500,14 @@ const float fFrustumScale = CalcFrustumScale(45.0f);</programlisting>
             <title>Rotation Project</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="Rotations.png"/>
+                    <imagedata fileref="Rotations.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
         <para>The function that builds the transformation matrix looks like this:</para>
         <example>
             <title>Rotation Transformation Building</title>
-            <programlisting language="cpp">glm::mat4 ConstructMatrix(float fElapsedTime)
-{
+            <programlisting language="cpp">glm::mat4 ConstructMatrix(float fElapsedTime) {
     const glm::mat3 &amp;rotMatrix = CalcRotation(fElapsedTime);
     glm::mat4 theMat(rotMatrix);
     theMat[3] = glm::vec4(offset, 1.0f);
@@ -598,7 +593,7 @@ gl_Position = cameraToClipMatrix * temp;</programlisting>
                 <title>Transform Order Diagram</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="TransOrderGeom.svg" />
+                        <imagedata fileref="TransOrderGeom.svg" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -715,7 +710,7 @@ gl_Position = cameraToClipMatrix * temp;</programlisting>
                 <title>Hierarchy Project</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="Robot%20Arm.png"/>
+                        <imagedata fileref="Robot%20Arm.png" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -729,8 +724,7 @@ gl_Position = cameraToClipMatrix * temp;</programlisting>
             <para>The <function>Draw</function> function looks like this:</para>
             <example>
                 <title>Hierarchy::Draw</title>
-                <programlisting language="cpp">void Draw()
-{
+                <programlisting language="cpp">void Draw() {
     MatrixStack modelToCameraStack;
     
     glUseProgram(theProgram);

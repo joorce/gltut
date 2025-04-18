@@ -71,7 +71,7 @@
             <title>Basic Texture</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="Basic%20Texture.png"/>
+                    <imagedata fileref="Basic%20Texture.png"  contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -88,14 +88,13 @@
                 into our OpenGL texture.</para>
             <example>
                 <title>BuildGaussianData function</title>
-                <programlisting language="cpp">void BuildGaussianData(std::vector&lt;GLubyte> &amp;textureData,
-                       int cosAngleResolution)
-{
+                <programlisting language="cpp">
+void BuildGaussianData(std::vector&lt;GLubyte> &amp;textureData,
+                       int cosAngleResolution) {
     textureData.resize(cosAngleResolution);
 
     std::vector&lt;GLubyte>::iterator currIt = textureData.begin();
-    for(int iCosAng = 0; iCosAng &lt; cosAngleResolution; iCosAng++)
-    {
+    for(int iCosAng = 0; iCosAng &lt; cosAngleResolution; iCosAng++) {
         float cosAng = iCosAng / (float)(cosAngleResolution - 1);
         float angle = acosf(cosAng);
         float exponent = angle / g_specularShininess;
@@ -136,8 +135,8 @@
                 object:</para>
             <example>
                 <title>CreateGaussianTexture function</title>
-                <programlisting language="cpp">GLuint CreateGaussianTexture(int cosAngleResolution)
-{
+                <programlisting language="cpp">
+GLuint CreateGaussianTexture(int cosAngleResolution) {
     std::vector&lt;GLubyte> textureData;
     BuildGaussianData(textureData, cosAngleResolution);
     
@@ -379,7 +378,7 @@ gaussianTerm = cosAngIncidence != 0.0 ? gaussianTerm : 0.0;</programlisting>
                 <title>Texture Binding and Context</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="TextureBindingDiagram.svg"/>
+                        <imagedata fileref="TextureBindingDiagram.svg" scalefit="1"  contentwidth="6in" />
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -388,7 +387,8 @@ gaussianTerm = cosAngIncidence != 0.0 ? gaussianTerm : 0.0;</programlisting>
                 uniform to an image unit.</para>
             <para>With UBOs, this used a different API from regular uniforms. Because samplers are
                 actual uniforms, the sampler API is just the uniform API:</para>
-            <programlisting language="cpp">GLuint gaussianTextureUnif = glGetUniformLocation(data.theProgram, "gaussianTexture");
+            <programlisting language="cpp">GLuint gaussianTextureUnif = 
+                glGetUniformLocation(data.theProgram, "gaussianTexture");
 glUseProgram(data.theProgram);
 glUniform1i(gaussianTextureUnif, g_gaussTexUnit);</programlisting>
             <para>Sampler uniforms are considered 1-dimesional (scalar) integer values from the
@@ -484,9 +484,9 @@ glSamplerParameteri(g_gaussSampler, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);</progr
                 effectively adds an additional value to each texture unit.</para>
             <figure>
                 <title>Sampler Binding and Context</title>
-                <mediaobject>
+                <mediaobject  align="center">
                     <imageobject>
-                        <imagedata fileref="SamplerBindingDiagram.svg"/>
+                        <imagedata fileref="SamplerBindingDiagram.svg"  scalefit="1"  contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -508,23 +508,23 @@ glSamplerParameteri(g_gaussSampler, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);</progr
             <para>If we use resolution <keycap>1</keycap>, we can see that it is a pretty rough
                 approximation. We can very clearly see the distinction between the different texels
                 in our lookup table. It is a 64-texel lookup table.</para>
-            <mediaobject>
+            <mediaobject align="center">
                 <imageobject>
-                    <imagedata fileref="Lookup%20Low%20Resolution.png"/>
+                    <imagedata fileref="Lookup%20Low%20Resolution.png"  contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
             <para>Switching to the level <keycap>3</keycap> resolution shows more gradations, and
                 looks much more like the shader calculation. This one is 256 texels across.</para>
             <mediaobject>
                     <imageobject>
-                        <imagedata fileref="Lookup%20Mid%20Resolution.png"/>
+                        <imagedata fileref="Lookup%20Mid%20Resolution.png"  contentwidth="6in"/>
                     </imageobject>
             </mediaobject>
             <para>The largest resolution, <keycap>4</keycap>, is 512 texels, and it looks nearly
                 identical to the pure shader version for this object.</para>
             <mediaobject>
                     <imageobject>
-                        <imagedata fileref="Lookup%20High%20Resolution.png"/>
+                        <imagedata fileref="Lookup%20High%20Resolution.png"  contentwidth="6in"/>
                     </imageobject>
             </mediaobject>
         </section>
@@ -551,7 +551,7 @@ glSamplerParameteri(g_gaussSampler, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);</progr
             <title>Projection and Interpolation</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="PerspectiveInterpolation.svg"/>
+                    <imagedata fileref="PerspectiveInterpolation.svg"  contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -663,7 +663,7 @@ glSamplerParameteri(g_gaussSampler, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);</progr
             <title>Material Texture</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="Material%20Texture.png"/>
+                    <imagedata fileref="Material%20Texture.png"  contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -693,18 +693,16 @@ glSamplerParameteri(g_gaussSampler, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);</progr
             <para>Our new function for building the data for the Gaussian term is as follows:</para>
             <example>
                 <title>BuildGaussianData in 2D</title>
-                <programlisting language="cpp">void BuildGaussianData(std::vector&lt;GLubyte> &amp;textureData,
+                <programlisting language="cpp">
+void BuildGaussianData(std::vector&lt;GLubyte> &amp;textureData,
                        int cosAngleResolution,
-                       int shininessResolution)
-{
+                       int shininessResolution) {
     textureData.resize(shininessResolution * cosAngleResolution);
     
     std::vector&lt;unsigned char>::iterator currIt = textureData.begin();
-    for(int iShin = 1; iShin &lt;= shininessResolution; iShin++)
-    {
+    for(int iShin = 1; iShin &lt;= shininessResolution; iShin++) {
         float shininess = iShin / (float)(shininessResolution);
-        for(int iCosAng = 0; iCosAng &lt; cosAngleResolution; iCosAng++)
-        {
+        for(int iCosAng = 0; iCosAng &lt; cosAngleResolution; iCosAng++) {
             float cosAng = iCosAng / (float)(cosAngleResolution - 1);
             float angle = acosf(cosAng);
             float exponent = angle / shininess;
@@ -730,16 +728,18 @@ glSamplerParameteri(g_gaussSampler, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);</progr
                 what we saw before, only with a couple of changes.</para>
             <example>
                 <title>CreateGaussianTexture in 2D</title>
-                <programlisting language="cpp">GLuint CreateGaussianTexture(int cosAngleResolution, int shininessResolution)
-{
+                <programlisting language="cpp">
+GLuint CreateGaussianTexture(int cosAngleResolution, int shininessResolution) {
     std::vector&lt;unsigned char> textureData;
     BuildGaussianData(textureData, cosAngleResolution, shininessResolution);
     
     GLuint gaussTexture;
     glGenTextures(1, &amp;gaussTexture);
     glBindTexture(GL_TEXTURE_2D, gaussTexture);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_R8, cosAngleResolution, shininessResolution, 0,
-        GL_RED, GL_UNSIGNED_BYTE, &amp;textureData[0]);
+    
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_R8, cosAngleResolution, 
+                 shininessResolution, 0, GL_RED, GL_UNSIGNED_BYTE, 
+                 &amp;textureData[0]);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_BASE_LEVEL, 0);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAX_LEVEL, 0);
     glBindTexture(GL_TEXTURE_2D, 0);
@@ -760,12 +760,11 @@ glSamplerParameteri(g_gaussSampler, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);</progr
                 textures for us, it is instructive to see a more manual process.</para>
             <example>
                 <title>CreateShininessTexture function</title>
-                <programlisting language="cpp">void CreateShininessTexture()
-{
+                <programlisting language="cpp">
+void CreateShininessTexture() {
     std::auto_ptr&lt;glimg::ImageSet> pImageSet;
     
-    try
-    {
+    try {
         pImageSet.reset(glimg::loaders::dds::LoadFromFile("data\\main.dds"));
         std::auto_ptr&lt;glimg::Image> pImage(pImageSet->GetImage(0, 0, 0));
         
@@ -779,8 +778,7 @@ glSamplerParameteri(g_gaussSampler, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);</progr
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAX_LEVEL, 0);
         glBindTexture(GL_TEXTURE_2D, 0);
     }
-    catch(glimg::ImageCreationException &amp;e)
-    {
+    catch(glimg::ImageCreationException &amp;e) {
         printf(e.what());
         throw;
     }
@@ -813,13 +811,12 @@ uniform sampler2D shininessTexture;</programlisting>
                 the lights:</para>
             <example>
                 <title>Shininess Texture Access</title>
-                <programlisting language="glsl">void main()
-{
+                <programlisting language="glsl">
+void main() {
     float specularShininess = texture(shininessTexture, shinTexCoord).r;
     
     vec4 accumLighting = Mtl.diffuseColor * Lgt.ambientIntensity;
-    for(int light = 0; light &lt; numberOfLights; light++)
-    {
+    for(int light = 0; light &lt; numberOfLights; light++) {
         accumLighting += ComputeLighting(Lgt.lights[light],
             cameraSpacePosition, vertexNormal, specularShininess);
     }
@@ -879,7 +876,7 @@ glBindSampler(g_shineTexUnit, g_textureSampler);</programlisting>
                 <title>A Torus</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="Torus.png"/>
+                        <imagedata fileref="Torus.png" depth="8cm"/>
                     </imageobject>
                 </mediaobject>
             </figure>

@@ -47,7 +47,7 @@
             <title>Basic Checkerboard Plane</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="BasicCheckerboardPlane.png"/>
+                    <imagedata fileref="BasicCheckerboardPlane.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -95,7 +95,7 @@ glSamplerParameteri(g_samplers[samplerIx], GL_TEXTURE_WRAP_T, GL_REPEAT);</progr
             <title>Jagged Texture Edge</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="NearestZoom.png"/>
+                    <imagedata fileref="NearestZoom.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -137,7 +137,7 @@ glSamplerParameteri(g_samplers[samplerIx], GL_TEXTURE_WRAP_T, GL_REPEAT);</progr
             <title>Nearest Sampling</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="NearestSampleDiag.svg"/>
+                    <imagedata fileref="NearestSampleDiag.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -160,7 +160,7 @@ glSamplerParameteri(g_samplers[1], GL_TEXTURE_MIN_FILTER, GL_LINEAR);</programli
             <title>Linear Filtering</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="CheckerboardLinear.png"/>
+                    <imagedata fileref="CheckerboardLinear.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -183,7 +183,7 @@ glSamplerParameteri(g_samplers[1], GL_TEXTURE_MIN_FILTER, GL_LINEAR);</programli
             <title>Large Minification Sampling</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="LargeMinificDiag.svg"/>
+                    <imagedata fileref="LargeMinificDiag.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -203,7 +203,7 @@ glSamplerParameteri(g_samplers[1], GL_TEXTURE_MIN_FILTER, GL_LINEAR);</programli
             <title>Mipmapped Minification Sampling</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="MipmapDiagram.svg"/>
+                    <imagedata fileref="MipmapDiagram.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -238,13 +238,15 @@ glSamplerParameteri(g_samplers[1], GL_TEXTURE_MIN_FILTER, GL_LINEAR);</programli
             <programlisting language="cpp">std::string filename(LOCAL_FILE_DIR);
 filename += "checker.dds";
 
-std::auto_ptr&lt;glimg::ImageSet> pImageSet(glimg::loaders::dds::LoadFromFile(filename.c_str()));
+std::auto_ptr&lt;glimg::ImageSet> pImageSet(
+    glimg::loaders::dds::LoadFromFile(filename.c_str()));
 
 glGenTextures(1, &amp;g_checkerTexture);
 glBindTexture(GL_TEXTURE_2D, g_checkerTexture);
 
-for(int mipmapLevel = 0; mipmapLevel &lt; pImageSet->GetMipmapCount(); mipmapLevel++)
-{
+for(int mipmapLevel = 0; 
+    mipmapLevel &lt; pImageSet->GetMipmapCount(); 
+    mipmapLevel++) {
     glimg::SingleImage image = pImageSet->GetImage(mipmapLevel, 0, 0);
     glimg::Dimensions dims = pImage->GetDimensions();
     
@@ -252,8 +254,10 @@ for(int mipmapLevel = 0; mipmapLevel &lt; pImageSet->GetMipmapCount(); mipmapLev
         GL_BGRA, GL_UNSIGNED_INT_8_8_8_8_REV, image.GetImageData());
 }
 
-glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_BASE_LEVEL, 0);
-glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAX_LEVEL, pImageSet->GetMipmapCount() - 1);
+glTexParameteri(GL_TEXTURE_2D, 
+                GL_TEXTURE_BASE_LEVEL, 0);
+glTexParameteri(GL_TEXTURE_2D, 
+                GL_TEXTURE_MAX_LEVEL, pImageSet->GetMipmapCount() - 1);
 glBindTexture(GL_TEXTURE_2D, 0);</programlisting>
         </example>
         <para>Because the file contains multiple mipmaps, we must load each one in turn. The GL
@@ -280,8 +284,14 @@ glBindTexture(GL_TEXTURE_2D, 0);</programlisting>
         <para>Mipmap filtering only works for minification, since minification represents a fragment
             area that is larger than the texture's resolution. To activate this, we use a special
                 <literal>MIPMAP</literal> mode of minification filtering.</para>
-        <programlisting language="cpp">glSamplerParameteri(g_samplers[2], GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-glSamplerParameteri(g_samplers[2], GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_NEAREST);</programlisting>
+
+        <programlisting language="cpp">
+glSamplerParameteri(g_samplers[2], 
+                    GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+glSamplerParameteri(g_samplers[2], 
+                    GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_NEAREST);
+        </programlisting>
+        
         <para>The <literal>GL_LINEAR_MIPMAP_NEAREST</literal> minification filter means the
             following. For a particular call to the GLSL <function>texture</function> function, it
             will detect which mipmap is the one that is nearest to our fragment area. This detection
@@ -295,7 +305,7 @@ glSamplerParameteri(g_samplers[2], GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_NEARE
             <title>Hallway with Mipmapping</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="LinearMipmapNearest.png"/>
+                    <imagedata fileref="LinearMipmapNearest.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -313,7 +323,7 @@ glSamplerParameteri(g_samplers[2], GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_NEARE
             <title>Hallway with Special Texture</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="SpecialHallwayLMipN.png"/>
+                    <imagedata fileref="SpecialHallwayLMipN.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -344,14 +354,12 @@ glSamplerParameteri(g_samplers[2], GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_NEARE
                 <title>Special Texture Data</title>
                 <programlisting language="cpp">void FillWithColor(std::vector&lt;GLubyte> &amp;buffer,
                    GLubyte red, GLubyte green, GLubyte blue,
-                   int width, int height)
-{
+                   int width, int height) {
     int numTexels = width * height;
     buffer.resize(numTexels * 3);
     
     std::vector&lt;GLubyte>::iterator it = buffer.begin();
-    while(it != buffer.end())
-    {
+    while(it != buffer.end()) {
         *it++ = red;
         *it++ = green;
         *it++ = blue;
@@ -531,7 +539,7 @@ glPixelStorei(GL_UNPACK_ALIGNMENT, 1);</programlisting>
             <title>Anisotropic Filtering</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="LightAnisotropic.png"/>
+                    <imagedata fileref="LightAnisotropic.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -544,9 +552,15 @@ glPixelStorei(GL_UNPACK_ALIGNMENT, 1);</programlisting>
                 result look better, but it will also decrease performance.</para>
             <para>This is done by setting the <literal>GL_TEXTURE_MAX_ANISOTROPY_EXT</literal>
                 sampler parameter:</para>
-            <programlisting language="cpp">glSamplerParameteri(g_samplers[4], GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-glSamplerParameteri(g_samplers[4], GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
-glSamplerParameterf(g_samplers[4], GL_TEXTURE_MAX_ANISOTROPY_EXT, 4.0f);</programlisting>
+
+            <programlisting language="cpp">
+glSamplerParameteri(g_samplers[4], 
+                    GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+glSamplerParameteri(g_samplers[4], 
+                    GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+glSamplerParameterf(g_samplers[4], 
+                    GL_TEXTURE_MAX_ANISOTROPY_EXT, 4.0f);</programlisting>
+
             <para>This represents the maximum number of samples that will be taken for any texture
                 accesses through this sampler. Note that we still use linear mipmap filtering in
                 combination with anisotropic filtering. While you could theoretically use
@@ -562,15 +576,18 @@ glSamplerParameterf(g_samplers[4], GL_TEXTURE_MAX_ANISOTROPY_EXT, 4.0f);</progra
             <programlisting language="cpp">GLfloat maxAniso = 0.0f;
 glGetFloatv(GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT, &amp;maxAniso);
 
-glSamplerParameteri(g_samplers[5], GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-glSamplerParameteri(g_samplers[5], GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
-glSamplerParameterf(g_samplers[5], GL_TEXTURE_MAX_ANISOTROPY_EXT, maxAniso);</programlisting>
+glSamplerParameteri(g_samplers[5], 
+                    GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+glSamplerParameteri(g_samplers[5], 
+                    GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+glSamplerParameterf(g_samplers[5], 
+                    GL_TEXTURE_MAX_ANISOTROPY_EXT, maxAniso);</programlisting>
             <para>To see the results of this, press the <keycap>6</keycap> key.</para>
             <figure>
                 <title>Max Anisotropic Filtering</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="HeavyAnisotropic.png"/>
+                        <imagedata fileref="HeavyAnisotropic.png" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>

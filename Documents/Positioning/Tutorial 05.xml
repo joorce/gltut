@@ -128,10 +128,8 @@ glBindVertexArray(vao);]]></programlisting>
                 conceptually as the following pseudo-code:</para>
             <example>
                 <title>Draw Arrays Implementation</title>
-                <programlisting language="cpp"><![CDATA[void glDrawArrays(GLenum type, GLint start, GLint count)
-{
-    for(GLint element = start; element < start + count; element++)
-    {
+                <programlisting language="cpp"><![CDATA[void glDrawArrays(GLenum type, GLint start, GLint count) {
+    for(GLint element = start; element < start + count; element++) {
         VertexShader(positionAttribArray[element], colorAttribArray[element]);
     }
 }]]></programlisting>
@@ -224,12 +222,10 @@ glBindVertexArray(vao);]]></programlisting>
                 <title>Draw Elements Implementation</title>
                 <programlisting language="cpp"><![CDATA[GLvoid *elementArray;
 
-void glDrawElements(GLenum type, GLint count, GLenum type, GLsizeiptr indices)
-{
+void glDrawElements(GLenum type, GLint count, GLenum type, GLsizeiptr indices) {
     GLtype *ourElementArray = (type*)((GLbyte *)elementArray + indices);
 
-    for(GLint elementIndex = 0; elementIndex < count; elementIndex++)
-    {
+    for(GLint elementIndex = 0; elementIndex < count; elementIndex++) {
         GLint element = ourElementArray[elementIndex];
         VertexShader(positionAttribArray[element], colorAttribArray[element]);
     }
@@ -257,8 +253,7 @@ void glDrawElements(GLenum type, GLint count, GLenum type, GLsizeiptr indices)
                 follows:</para>
             <example>
                 <title>VAO Initialization</title>
-                <programlisting language="cpp"><![CDATA[void InitializeVertexArrayObjects()
-{
+                <programlisting language="cpp"><![CDATA[void InitializeVertexArrayObjects() {
     glGenVertexArrays(1, &vaoObject1);
     glBindVertexArray(vaoObject1);
     
@@ -343,7 +338,7 @@ void glDrawElements(GLenum type, GLint count, GLenum type, GLsizeiptr indices)
                 <title>Overlapping Objects</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="Overlap%20No%20Depth.png" contentwidth="3in"/>
+                        <imagedata fileref="Overlap%20No%20Depth.png" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -446,8 +441,7 @@ glUseProgram(0);</programlisting>
             buffer. This changes our element buffer into the following:</para>
         <example>
             <title>MultiObject Element Buffer</title>
-            <programlisting language="cpp">const GLshort indexData[] =
-{
+            <programlisting language="cpp">const GLshort indexData[] = {
 //Object 1
 0, 2, 1,        3, 2, 0,
 4, 5, 6,        6, 7, 4,
@@ -537,7 +531,7 @@ glUseProgram(0);</programlisting>
         <informalfigure>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="Overlap%20No%20Depth.png" contentwidth="3in"/>
+                    <imagedata fileref="Overlap%20No%20Depth.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </informalfigure>
@@ -570,7 +564,7 @@ glUseProgram(0);</programlisting>
             <title>Three Overlapping Triangles</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="ThreeTriangleOverlap.svg" />
+                    <imagedata fileref="ThreeTriangleOverlap.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -766,7 +760,7 @@ glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);</programlisting>
                 <title>Depth Buffering</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="Depth%20Buffering.png" contentwidth="3in"/>
+                        <imagedata fileref="Depth%20Buffering.png" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -782,7 +776,7 @@ glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);</programlisting>
                 <mediaobject>
                     <imageobject>
                         <imagedata fileref="Depth%20Buffering%20Mild%20Overlap.png"
-                            contentwidth="3in"/>
+                             contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -794,7 +788,7 @@ glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);</programlisting>
                 <mediaobject>
                     <imageobject>
                         <imagedata fileref="Depth%20Buffering%20Major%20Overlap.png"
-                            contentwidth="3in"/>
+                             contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -855,7 +849,7 @@ glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);</programlisting>
             <title>Triangle Clipping</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata  fileref="TriangleClipping.svg"/>
+                    <imagedata  fileref="TriangleClipping.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -867,7 +861,7 @@ glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);</programlisting>
             <title>Near Plane Clipping</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="Vertex%20Clipping.png" contentwidth="4in"/>
+                    <imagedata fileref="Vertex%20Clipping.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -948,11 +942,9 @@ glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);</programlisting>
                 <function>keyboard</function> function has changed as follows:</para>
         <example>
             <title>Depth Clamping On/Off</title>
-            <programlisting language="cpp">void keyboard(unsigned char key, int x, int y)
-{
+            <programlisting language="cpp">void keyboard(unsigned char key, int x, int y) {
     static bool bDepthClampingActive = false;
-    switch (key)
-    {
+    switch (key) {
     case 27:
         glutLeaveMainLoop();
         break;

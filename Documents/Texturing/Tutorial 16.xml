@@ -47,7 +47,7 @@
             <title>Gamma Ramp </title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="Gamma%20Ramp.png"/>
+                    <imagedata fileref="Gamma%20Ramp.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -109,25 +109,30 @@
             formats.</para>
         <example>
             <title>sRGB Image Format</title>
-            <programlisting language="cpp">std::auto_ptr&lt;glimg::ImageSet> pImageSet(glimg::loaders::stb::LoadFromFile(filename.c_str()));
+            <programlisting language="cpp">
+std::auto_ptr&lt;glimg::ImageSet> pImageSet(
+    glimg::loaders::stb::LoadFromFile(filename.c_str()));
 
 glimg::SingleImage image = pImageSet->GetImage(0, 0, 0);
 glimg::Dimensions dims = image.GetDimensions();
 
-glimg::OpenGLPixelTransferParams pxTrans = glimg::GetUploadFormatType(pImageSet->GetFormat(), 0);
+glimg::OpenGLPixelTransferParams pxTrans = 
+    glimg::GetUploadFormatType(pImageSet->GetFormat(), 0);
 
 glBindTexture(GL_TEXTURE_2D, g_textures[0]);
 
 glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB8, dims.width, dims.height, 0,
-    pxTrans.format, pxTrans.type, image.GetImageData());
+             pxTrans.format, pxTrans.type, image.GetImageData());
 glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_BASE_LEVEL, 0);
-glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAX_LEVEL, pImageSet->GetMipmapCount() - 1);
+glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAX_LEVEL, 
+                pImageSet->GetMipmapCount() - 1);
 		
 glBindTexture(GL_TEXTURE_2D, g_textures[1]);
 glTexImage2D(GL_TEXTURE_2D, 0, GL_SRGB8, dims.width, dims.height, 0,
     pxTrans.format, pxTrans.type, image.GetImageData());
 glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_BASE_LEVEL, 0);
-glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAX_LEVEL, pImageSet->GetMipmapCount() - 1);
+glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAX_LEVEL, 
+                pImageSet->GetMipmapCount() - 1);
 
 glBindTexture(GL_TEXTURE_2D, 0);</programlisting>
         </example>
@@ -143,7 +148,7 @@ glBindTexture(GL_TEXTURE_2D, 0);</programlisting>
             <title>Gamma Ramp with sRGB Images</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="Gamma%20Ramp%20sRGB.png"/>
+                    <imagedata fileref="Gamma%20Ramp%20sRGB.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -371,7 +376,7 @@ glBindBuffer(GL_ARRAY_BUFFER, 0);</programlisting>
             <title>Gamma Landscape</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="Gamma%20Landscape.png"/>
+                    <imagedata fileref="Gamma%20Landscape.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -396,8 +401,7 @@ glBindBuffer(GL_ARRAY_BUFFER, 0);</programlisting>
             screen image, the framework calls the <function>defaults</function> function.</para>
         <example>
             <title>Gamma Landscape defaults Function</title>
-            <programlisting language="cpp">unsigned int defaults(unsigned int displayMode, int &amp;width, int &amp;height)
-{
+            <programlisting language="cpp">unsigned int defaults(unsigned int displayMode, int &amp;width, int &amp;height) {
     return displayMode | GLUT_SRGB;
 }</programlisting>
         </example>

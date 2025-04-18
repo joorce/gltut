@@ -27,7 +27,7 @@
             <title>Double Projection</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="DoubleProjection.png"/>
+                    <imagedata fileref="DoubleProjection.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -59,7 +59,7 @@
             <title>Top View Projection</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="ProjectTopView.png"/>
+                    <imagedata fileref="ProjectTopView.png"  contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -77,7 +77,7 @@
             <title>Near View Projection</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="ProjectCloseObject.png"/>
+                    <imagedata fileref="ProjectCloseObject.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -180,7 +180,8 @@ Framework::Mesh *pSphereMesh = pScene->FindMesh("m_sphere");
 //No more things that can throw.
 g_spinBarOrient = nodes[3].NodeGetOrient();
 g_unlitProg = unlit;
-g_unlitModelToCameraMatrixUnif = glGetUniformLocation(unlit, "modelToCameraMatrix");
+g_unlitModelToCameraMatrixUnif = 
+    glGetUniformLocation(unlit, "modelToCameraMatrix");
 g_unlitObjectColorUnif = glGetUniformLocation(unlit, "objectColor");
 
 std::swap(nodes, g_nodes);
@@ -243,13 +244,15 @@ g_nodes[3].NodeSetOrient(g_spinBarOrient * glm::rotate(glm::fquat(),
 
 {
     glutil::MatrixStack persMatrix;
-    persMatrix.Perspective(60.0f, (displaySize.x / (float)displaySize.y), g_fzNear, g_fzFar);
+    persMatrix.Perspective(
+        60.0f, (displaySize.x / (float)displaySize.y), g_fzNear, g_fzFar);
     
     ProjectionBlock projData;
     projData.cameraToClipMatrix = persMatrix.Top();
     
     glBindBuffer(GL_UNIFORM_BUFFER, g_projectionUniformBuffer);
-    glBufferData(GL_UNIFORM_BUFFER, sizeof(ProjectionBlock), &amp;projData, GL_STREAM_DRAW);
+    glBufferData(GL_UNIFORM_BUFFER, 
+                 sizeof(ProjectionBlock), &amp;projData, GL_STREAM_DRAW);
     glBindBuffer(GL_UNIFORM_BUFFER, 0);
 }
 
@@ -267,20 +270,24 @@ g_pScene->Render(modelMatrix.Top());</programlisting>
                 <programlisting language="cpp">{
     glutil::MatrixStack persMatrix;
     persMatrix.ApplyMatrix(glm::mat4(glm::mat3(g_persViewPole.CalcMatrix())));
-    persMatrix.Perspective(60.0f, (displaySize.x / (float)displaySize.y), g_fzNear, g_fzFar);
+    persMatrix.Perspective(
+        60.0f, (displaySize.x / (float)displaySize.y), g_fzNear, g_fzFar);
     
     ProjectionBlock projData;
     projData.cameraToClipMatrix = persMatrix.Top();
     
     glBindBuffer(GL_UNIFORM_BUFFER, g_projectionUniformBuffer);
-    glBufferData(GL_UNIFORM_BUFFER, sizeof(ProjectionBlock), &amp;projData, GL_STREAM_DRAW);
+    glBufferData(GL_UNIFORM_BUFFER, 
+                 sizeof(ProjectionBlock), &amp;projData, GL_STREAM_DRAW);
     glBindBuffer(GL_UNIFORM_BUFFER, 0);
 }
 
 if(!g_bDepthClampProj)
     glDisable(GL_DEPTH_CLAMP);
+
 glViewport(displaySize.x + (g_displayWidth % 2), 0,
     (GLsizei)displaySize.x, (GLsizei)displaySize.y);
+
 g_pScene->Render(modelMatrix.Top());
 glEnable(GL_DEPTH_CLAMP);</programlisting>
             </example>
@@ -415,11 +422,14 @@ glEnable(GL_DEPTH_CLAMP);</programlisting>
             <example>
                 <title>View Camera to Projected Texture Transform</title>
                 <programlisting language="cpp">glutil::MatrixStack lightProjStack;
+
 //Texture-space transform
 lightProjStack.Translate(0.5f, 0.5f, 0.0f);
 lightProjStack.Scale(0.5f, 0.5f, 1.0f);
+
 //Project. Z-range is irrelevant.
 lightProjStack.Perspective(g_lightFOVs[g_currFOVIndex], 1.0f, 1.0f, 100.0f);
+
 //Transform from main camera space to light camera space.
 lightProjStack.ApplyMatrix(lightView);
 lightProjStack.ApplyMatrix(glm::inverse(cameraMatrix));
@@ -459,8 +469,8 @@ currLight.cameraSpaceLightPos = vec4(cameraSpaceProjLightPos, 1.0);
 currLight.lightIntensity =
     textureProj(lightProjTex, lightProjPosition.xyw) * 4.0;
 
-currLight.lightIntensity = lightProjPosition.w > 0 ?
-	currLight.lightIntensity : vec4(0.0);</programlisting>
+currLight.lightIntensity = 
+    lightProjPosition.w > 0 ? currLight.lightIntensity : vec4(0.0);</programlisting>
             <para>We create a simple structure that we fill in. Later, we pass this structure to
                     <function>ComputeLighting</function>, and it does the usual thing.</para>
             <para>The view camera space position of the projected light is passed in as a uniform.
@@ -681,7 +691,8 @@ glSamplerParameterfv(g_samplers[1], GL_TEXTURE_BORDER_COLOR, color);</programlis
             <example>
                 <title>Cube Texture Loading</title>
                 <programlisting language="cpp">std::string filename(Framework::FindFileOrThrow(g_texDefs[tex].filename));
-std::auto_ptr&lt;glimg::ImageSet> pImageSet(glimg::loaders::dds::LoadFromFile(filename.c_str()));
+std::auto_ptr&lt;glimg::ImageSet> 
+pImageSet(glimg::loaders::dds::LoadFromFile(filename.c_str()));
 
 glBindTexture(GL_TEXTURE_CUBE_MAP, g_lightTextures[tex]);
 glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_BASE_LEVEL, 0);
@@ -690,8 +701,7 @@ glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MAX_LEVEL, 0);
 glimg::Dimensions dims = pImageSet->GetDimensions();
 GLenum imageFormat = (GLenum)glimg::GetInternalFormat(pImageSet->GetFormat(), 0);
 
-for(int face = 0; face &lt; 6; ++face)
-{
+for(int face = 0; face &lt; 6; ++face) {
     glimg::SingleImage img = pImageSet->GetImage(0, 0, face);
     glCompressedTexImage2D(GL_TEXTURE_CUBE_MAP_POSITIVE_X + face,
         0, imageFormat, dims.width, dims.height, 0,
@@ -850,7 +860,8 @@ g_camLightPosBinder.SetValue(lightPos);</programlisting>
                 we invert it to get the world-to-light transform. The light's position in world
                 space is taken similarly.</para>
             <para>The vertex shader (cubeLight.vert) is about what you would expect:</para>
-            <programlisting language="glsl">lightSpacePosition = (cameraToLightProjMatrix * vec4(cameraSpacePosition, 1.0)).xyz;</programlisting>
+            <programlisting language="glsl">lightSpacePosition = 
+    (cameraToLightProjMatrix * vec4(cameraSpacePosition, 1.0)).xyz;</programlisting>
             <para>The <varname>lightSpacePosition</varname> is output from the vertex shader and
                 interpolated. Again we find that this interpolates just fine, so there is no need to
                 do this transformation per-fragment.</para>

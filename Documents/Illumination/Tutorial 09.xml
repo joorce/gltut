@@ -60,7 +60,7 @@
             <title>Surface Light Absorption</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="SurfaceColorAbsorption.svg"/>
+                    <imagedata fileref="SurfaceColorAbsorption.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -116,7 +116,7 @@
                 <title>Diffuse Reflectance</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="DiffuseReflection.svg"/>
+                        <imagedata fileref="DiffuseReflection.svg" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -271,7 +271,7 @@
                 <title>Basic Lighting</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="Basic%20Lighting.png"/>
+                        <imagedata fileref="Basic%20Lighting.png" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -328,9 +328,11 @@ modelMatrix.SetMatrix(g_viewPole.CalcMatrix());
 glm::vec4 lightDirCameraSpace = modelMatrix.Top() * g_lightDirection;
 
 glUseProgram(g_WhiteDiffuseColor.theProgram);
-glUniform3fv(g_WhiteDiffuseColor.dirToLightUnif, 1, glm::value_ptr(lightDirCameraSpace));
+glUniform3fv(g_WhiteDiffuseColor.dirToLightUnif, 1, 
+    glm::value_ptr(lightDirCameraSpace));
 glUseProgram(g_VertexDiffuseColor.theProgram);
-glUniform3fv(g_VertexDiffuseColor.dirToLightUnif, 1, glm::value_ptr(lightDirCameraSpace));
+glUniform3fv(g_VertexDiffuseColor.dirToLightUnif, 1, 
+    glm::value_ptr(lightDirCameraSpace));
 glUseProgram(0);</programlisting>
             </example>
             <para>Since our vertex shader will be doing all of its lighting computations in camera
@@ -356,9 +358,11 @@ glUseProgram(0);</programlisting>
                 <programlisting language="cpp">glutil::PushStack push(modelMatrix);
 
 glUseProgram(g_WhiteDiffuseColor.theProgram);
-glUniformMatrix4fv(g_WhiteDiffuseColor.modelToCameraMatrixUnif, 1, GL_FALSE, glm::value_ptr(modelMatrix.Top()));
+glUniformMatrix4fv(g_WhiteDiffuseColor.modelToCameraMatrixUnif, 1, 
+    GL_FALSE, glm::value_ptr(modelMatrix.Top()));
 glm::mat3 normMatrix(modelMatrix.Top());
-glUniformMatrix3fv(g_WhiteDiffuseColor.normalModelToCameraMatrixUnif, 1, GL_FALSE, glm::value_ptr(normMatrix));
+glUniformMatrix3fv(g_WhiteDiffuseColor.normalModelToCameraMatrixUnif, 1, 
+    GL_FALSE, glm::value_ptr(normMatrix));
 glUniform4f(g_WhiteDiffuseColor.lightIntensityUnif, 1.0f, 1.0f, 1.0f, 1.0f);
 g_pPlaneMesh->Render();
 glUseProgram(0);</programlisting>
@@ -381,21 +385,22 @@ glUseProgram(0);</programlisting>
 
 modelMatrix.ApplyMatrix(g_objtPole.CalcMatrix());
 
-if(g_bDrawColoredCyl)
-{
+if(g_bDrawColoredCyl) {
     glUseProgram(g_VertexDiffuseColor.theProgram);
-    glUniformMatrix4fv(g_VertexDiffuseColor.modelToCameraMatrixUnif, 1, GL_FALSE, glm::value_ptr(modelMatrix.Top()));
+    glUniformMatrix4fv(g_VertexDiffuseColor.modelToCameraMatrixUnif, 1, 
+        GL_FALSE, glm::value_ptr(modelMatrix.Top()));
     glm::mat3 normMatrix(modelMatrix.Top());
-    glUniformMatrix3fv(g_VertexDiffuseColor.normalModelToCameraMatrixUnif, 1, GL_FALSE, glm::value_ptr(normMatrix));
+    glUniformMatrix3fv(g_VertexDiffuseColor.normalModelToCameraMatrixUnif, 1, 
+        GL_FALSE, glm::value_ptr(normMatrix));
     glUniform4f(g_VertexDiffuseColor.lightIntensityUnif, 1.0f, 1.0f, 1.0f, 1.0f);
     g_pCylinderMesh->Render("lit-color");
-}
-else
-{
+} else {
     glUseProgram(g_WhiteDiffuseColor.theProgram);
-    glUniformMatrix4fv(g_WhiteDiffuseColor.modelToCameraMatrixUnif, 1, GL_FALSE, glm::value_ptr(modelMatrix.Top()));
+    glUniformMatrix4fv(g_WhiteDiffuseColor.modelToCameraMatrixUnif, 1, 
+        GL_FALSE, glm::value_ptr(modelMatrix.Top()));
     glm::mat3 normMatrix(modelMatrix.Top());
-    glUniformMatrix3fv(g_WhiteDiffuseColor.normalModelToCameraMatrixUnif, 1, GL_FALSE, glm::value_ptr(normMatrix));
+    glUniformMatrix3fv(g_WhiteDiffuseColor.normalModelToCameraMatrixUnif, 1, 
+        GL_FALSE, glm::value_ptr(normMatrix));
     glUniform4f(g_WhiteDiffuseColor.lightIntensityUnif, 1.0f, 1.0f, 1.0f, 1.0f);
     g_pCylinderMesh->Render("lit");
 }
@@ -440,14 +445,13 @@ uniform vec4 lightIntensity;
 uniform mat4 modelToCameraMatrix;
 uniform mat3 normalModelToCameraMatrix;
 
-layout(std140) uniform Projection
-{
+layout(std140) uniform Projection {
     mat4 cameraToClipMatrix;
 };
 
-void main()
-{
-    gl_Position = cameraToClipMatrix * (modelToCameraMatrix * vec4(position, 1.0));
+void main() {
+    gl_Position = 
+        cameraToClipMatrix * (modelToCameraMatrix * vec4(position, 1.0));
     
 	vec3 normCamSpace = normalize(normalModelToCameraMatrix * normal);
     
@@ -551,7 +555,7 @@ void main()
             <title>Circle Scaling</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="CircleScaling.svg" />
+                    <imagedata fileref="CircleScaling.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -560,7 +564,7 @@ void main()
             <title>Circle Scaling with Normals</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="CircleNormalScaling.svg" />
+                    <imagedata fileref="CircleNormalScaling.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -647,19 +651,19 @@ void main()
 
 modelMatrix.ApplyMatrix(g_objtPole.CalcMatrix());
 
-if(g_bScaleCyl)
-{
+if(g_bScaleCyl) {
     modelMatrix.Scale(1.0f, 1.0f, 0.2f);
 }
 
 glUseProgram(g_VertexDiffuseColor.theProgram);
-glUniformMatrix4fv(g_VertexDiffuseColor.modelToCameraMatrixUnif, 1, GL_FALSE, glm::value_ptr(modelMatrix.Top()));
+glUniformMatrix4fv(g_VertexDiffuseColor.modelToCameraMatrixUnif, 1, 
+    GL_FALSE, glm::value_ptr(modelMatrix.Top()));
 glm::mat3 normMatrix(modelMatrix.Top());
-if(g_bDoInvTranspose)
-{
+if(g_bDoInvTranspose) {
     normMatrix = glm::transpose(glm::inverse(normMatrix));
 }
-glUniformMatrix3fv(g_VertexDiffuseColor.normalModelToCameraMatrixUnif, 1, GL_FALSE, glm::value_ptr(normMatrix));
+glUniformMatrix3fv(g_VertexDiffuseColor.normalModelToCameraMatrixUnif, 1, 
+    GL_FALSE, glm::value_ptr(normMatrix));
 glUniform4f(g_VertexDiffuseColor.lightIntensityUnif, 1.0f, 1.0f, 1.0f, 1.0f);
 g_pCylinderMesh->Render("lit-color");
 glUseProgram(0);</programlisting>
@@ -669,7 +673,7 @@ glUseProgram(0);</programlisting>
             <title>Lighting and Scale</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="Scale%20and%20Lighting.png"/>
+                    <imagedata fileref="Scale%20and%20Lighting.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -693,7 +697,7 @@ glUseProgram(0);</programlisting>
             <title>Half Lit</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="No%20Ambient.png"/>
+                    <imagedata fileref="No%20Ambient.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -757,7 +761,7 @@ glUseProgram(0);</programlisting>
             <title>Ambient Lighting</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="Ambient%20Lighting.png"/>
+                    <imagedata fileref="Ambient%20Lighting.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -786,14 +790,13 @@ uniform vec4 ambientIntensity;
 uniform mat4 modelToCameraMatrix;
 uniform mat3 normalModelToCameraMatrix;
 
-layout(std140) uniform Projection
-{
+layout(std140) uniform Projection {
     mat4 cameraToClipMatrix;
 };
 
-void main()
-{
-    gl_Position = cameraToClipMatrix * (modelToCameraMatrix * vec4(position, 1.0));
+void main() {
+    gl_Position = 
+        cameraToClipMatrix * (modelToCameraMatrix * vec4(position, 1.0));
     
     vec3 normCamSpace = normalize(normalModelToCameraMatrix * normal);
     
@@ -813,8 +816,7 @@ void main()
             pure-diffuse case and the diffuse+ambient case:</para>
         <example>
             <title>Lighting Intensity Settings</title>
-            <programlisting language="cpp">if(g_bShowAmbient)
-{
+            <programlisting language="cpp">if(g_bShowAmbient) {
     glUseProgram(whiteDiffuse.theProgram);
     glUniform4f(whiteDiffuse.lightIntensityUnif, 0.8f, 0.8f, 0.8f, 1.0f);
     glUniform4f(whiteDiffuse.ambientIntensityUnif, 0.2f, 0.2f, 0.2f, 1.0f);
@@ -822,8 +824,7 @@ void main()
     glUniform4f(vertexDiffuse.lightIntensityUnif, 0.8f, 0.8f, 0.8f, 1.0f);
     glUniform4f(vertexDiffuse.ambientIntensityUnif, 0.2f, 0.2f, 0.2f, 1.0f);
 }
-else
-{
+else {
     glUseProgram(whiteDiffuse.theProgram);
     glUniform4f(whiteDiffuse.lightIntensityUnif, 1.0f, 1.0f, 1.0f, 1.0f);
     glUseProgram(vertexDiffuse.theProgram);
@@ -856,7 +857,7 @@ else
             <title>Cube Position Topology</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="CubePositionTopology.svg"/>
+                    <imagedata fileref="CubePositionTopology.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -870,7 +871,7 @@ else
             <title>Cube Normal Topology</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="CubeNormalTopology.svg"/>
+                    <imagedata fileref="CubeNormalTopology.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -924,7 +925,7 @@ else
             <title>Full Cube Topology</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="CubeTotalTopology.svg"/>
+                    <imagedata fileref="CubeTotalTopology.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>

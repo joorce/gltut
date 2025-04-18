@@ -40,7 +40,7 @@
             <title>Vertex Point Lighting</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="Vertex%20Point%20Lighting.png"/>
+                    <imagedata fileref="Vertex%20Point%20Lighting.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -61,9 +61,11 @@ const glm::vec4 &amp;worldLightPos = CalcLightPosition();
 glm::vec4 lightPosCameraSpace = modelMatrix.Top() * worldLightPos;
 
 glUseProgram(g_WhiteDiffuseColor.theProgram);
-glUniform3fv(g_WhiteDiffuseColor.lightPosUnif, 1, glm::value_ptr(lightPosCameraSpace));
+glUniform3fv(g_WhiteDiffuseColor.lightPosUnif, 1, 
+    glm::value_ptr(lightPosCameraSpace));
 glUseProgram(g_VertexDiffuseColor.theProgram);
-glUniform3fv(g_VertexDiffuseColor.lightPosUnif, 1, glm::value_ptr(lightPosCameraSpace));</programlisting>
+glUniform3fv(g_VertexDiffuseColor.lightPosUnif, 1, 
+    glm::value_ptr(lightPosCameraSpace));</programlisting>
         </example>
         <para>The light is computed initially in world space, then transformed into camera space.
             The camera-space light position is given to both of the shaders. Rendering proceeds
@@ -87,13 +89,11 @@ uniform vec4 ambientIntensity;
 uniform mat4 modelToCameraMatrix;
 uniform mat3 normalModelToCameraMatrix;
 
-uniform Projection
-{
+uniform Projection {
     mat4 cameraToClipMatrix;
 };
 
-void main()
-{
+void main() {
     vec4 cameraPosition = (modelToCameraMatrix * vec4(position, 1.0));
     gl_Position = cameraToClipMatrix * cameraPosition;
     
@@ -131,7 +131,7 @@ void main()
             <title>Light Near Surface</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="LightNearSurface.svg" />
+                    <imagedata fileref="LightNearSurface.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -322,7 +322,7 @@ void main()
             <title>Fragment Point Lighting</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="Fragment%20Point%20Lighting.png"/>
+                    <imagedata fileref="Fragment%20Point%20Lighting.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -361,7 +361,8 @@ glm::value_ptr(modelMatrix.Top()));
 
 glm::mat4 invTransform = glm::inverse(modelMatrix.Top());
 glm::vec4 lightPosModelSpace = invTransform * lightPosCameraSpace;
-glUniform3fv(pWhiteProgram->modelSpaceLightPosUnif, 1, glm::value_ptr(lightPosModelSpace));
+glUniform3fv(pWhiteProgram->modelSpaceLightPosUnif, 
+    1, glm::value_ptr(lightPosModelSpace));
 
 g_pPlaneMesh->Render();
 glUseProgram(0);</programlisting>
@@ -392,14 +393,13 @@ uniform vec4 ambientIntensity;
 uniform mat4 modelToCameraMatrix;
 uniform mat3 normalModelToCameraMatrix;
 
-uniform Projection
-{
+uniform Projection {
     mat4 cameraToClipMatrix;
 };
 
-void main()
-{
-    gl_Position = cameraToClipMatrix * (modelToCameraMatrix * vec4(position, 1.0));
+void main() {
+    gl_Position = 
+        cameraToClipMatrix * (modelToCameraMatrix * vec4(position, 1.0));
     
     vec3 dirToLight = normalize(modelSpaceLightPos - position);
     
@@ -434,14 +434,13 @@ out vec3 modelSpacePosition;
 
 uniform mat4 modelToCameraMatrix;
 
-uniform Projection
-{
+uniform Projection {
     mat4 cameraToClipMatrix;
 };
 
-void main()
-{
-    gl_Position = cameraToClipMatrix * (modelToCameraMatrix * vec4(position, 1.0));
+void main() {
+    gl_Position = 
+        cameraToClipMatrix * (modelToCameraMatrix * vec4(position, 1.0));
     
     modelSpacePosition = position;
     vertexNormal = normal;
@@ -467,8 +466,7 @@ uniform vec3 modelSpaceLightPos;
 uniform vec4 lightIntensity;
 uniform vec4 ambientIntensity;
 
-void main()
-{
+void main() {
     vec3 lightDir = normalize(modelSpaceLightPos - modelSpacePosition);
     
     float cosAngIncidence = dot(normalize(vertexNormal), lightDir);
@@ -494,7 +492,7 @@ void main()
                 <title>Close Lit Cylinder</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="Cylinder%20Close%20Light.png"/>
+                        <imagedata fileref="Cylinder%20Close%20Light.png" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -564,7 +562,7 @@ void main()
             <title>High Light</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="High%20Light.png"/>
+                    <imagedata fileref="High%20Light.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -744,7 +742,7 @@ void main()
                 <title>Fragment Attenuation</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="Fragment%20Attenuation.png"/>
+                        <imagedata fileref="Fragment%20Attenuation.png" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -770,8 +768,7 @@ void main()
                 <programlisting language="glsl">uniform float lightAttenuation;
 uniform bool bUseRSquare;
 
-uniform UnProjection
-{
+uniform UnProjection {
     mat4 clipToCameraMatrix;
     ivec2 windowSize;
 };</programlisting>
@@ -805,8 +802,7 @@ uniform UnProjection
                 computes the camera-space position:</para>
             <example>
                 <title>Window to Camera Space Function</title>
-                <programlisting language="glsl">vec3 CalcCameraSpacePosition()
-{
+                <programlisting language="glsl">vec3 CalcCameraSpacePosition() {
     vec4 ndcPos;
     ndcPos.xy = ((gl_FragCoord.xy / windowSize.xy) * 2.0) - 1.0;
     ndcPos.z = (2.0 * gl_FragCoord.z - gl_DepthRange.near - gl_DepthRange.far) /
@@ -836,8 +832,7 @@ uniform UnProjection
                 arguments. The second function is not quite as simple.</para>
             <example>
                 <title>Light Intensity Application Function</title>
-                <programlisting language="glsl">vec4 ApplyLightIntensity(in vec3 cameraSpacePosition, out vec3 lightDirection)
-{
+                <programlisting language="glsl">vec4 ApplyLightIntensity(in vec3 cameraSpacePosition, out vec3 lightDirection) {
     vec3 lightDifference =  cameraSpaceLightPos - cameraSpacePosition;
     float lightDistanceSqr = dot(lightDifference, lightDifference);
     lightDirection = lightDifference * inversesqrt(lightDistanceSqr);
@@ -908,8 +903,7 @@ uniform UnProjection
                 prior versions:</para>
             <example>
                 <title>Main Light Attenuation</title>
-                <programlisting language="glsl">void main()
-{
+                <programlisting language="glsl">void main() {
     vec3 cameraSpacePosition = CalcCameraSpacePosition();
     
     vec3 lightDir = vec3(0.0);

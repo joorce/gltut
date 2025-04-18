@@ -30,7 +30,7 @@
             <title>Position Vectors</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="VectorPosition.svg"/>
+                    <imagedata fileref="VectorPosition.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -42,7 +42,7 @@
             <title>Direction Vectors</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="VectorDirections.svg"/>
+                    <imagedata fileref="VectorDirections.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -79,7 +79,7 @@
             <title>Vector Addition</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="VectorAddition.svg"/>
+                    <imagedata fileref="VectorAddition.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -90,7 +90,7 @@
             <title>Vector Addition Head-to-Tail</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="VectorAdditionHeads.svg"/>
+                    <imagedata fileref="VectorAdditionHeads.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -112,7 +112,7 @@
             <title>Vector Negation</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="VectorNegation.svg"/>
+                    <imagedata fileref="VectorNegation.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -127,7 +127,7 @@
             <title>Vector Subtraction</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="VectorSubtraction.svg"/>
+                    <imagedata fileref="VectorSubtraction.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -154,7 +154,7 @@
             <title>Vector Scaling</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="VectorScalarMult.svg"/>
+                    <imagedata fileref="VectorScalarMult.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -243,7 +243,7 @@
             <title>An Image</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="PixelImage.svg"/>
+                    <imagedata fileref="PixelImage.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -366,7 +366,7 @@
                 <title>Normalized Device Coordinate Space</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="NormDeviceCoord.svg" contentwidth="4in"/>
+                        <imagedata fileref="NormDeviceCoord.svg" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -550,8 +550,7 @@
                 layer.</para>
             <para>In C++, if you wanted an object that contained an integer, a float, and a string,
                 you would create it and access it like this:</para>
-            <programlisting language="cpp">struct Object
-{
+            <programlisting language="cpp">struct Object {
     int count;
     float opacity;
     char *name;

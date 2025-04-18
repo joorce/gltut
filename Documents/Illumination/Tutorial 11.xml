@@ -37,7 +37,7 @@
             <title>Perfect Specular Reflection</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="SpecularReflection.svg" />
+                    <imagedata fileref="SpecularReflection.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -154,7 +154,7 @@
                 <title>Phong Lighting</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="Phong%20Lighting.png"/>
+                        <imagedata fileref="Phong%20Lighting.png" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -271,7 +271,7 @@ outputColor = (diffuseColor * attenIntensity * cosAngIncidence) +
                 <title>Phong with Dark Diffuse</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="Phong%20Dark%20Diffuse.png"/>
+                        <imagedata fileref="Phong%20Dark%20Diffuse.png" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -285,7 +285,7 @@ outputColor = (diffuseColor * attenIntensity * cosAngIncidence) +
                 <title>Phong Clipping</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="Phong%20Clipping.png"/>
+                        <imagedata fileref="Phong%20Clipping.png" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -302,7 +302,7 @@ outputColor = (diffuseColor * attenIntensity * cosAngIncidence) +
                 <title>Phong Distortion</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="Phong%20Distortion.png"/>
+                        <imagedata fileref="Phong%20Distortion.png" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -389,7 +389,7 @@ outputColor = (diffuseColor * attenIntensity * cosAngIncidence) +
             <title>Blinn Lighting</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="Blinn%20Lighting.png"/>
+                    <imagedata fileref="Blinn%20Lighting.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -527,7 +527,7 @@ outputColor = (diffuseColor * attenIntensity * cosAngIncidence) +
             <title>Gaussian Probability Distribution Curves</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="GaussianPlot.svg" />
+                    <imagedata fileref="GaussianPlot.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -611,7 +611,7 @@ outputColor = (diffuseColor * attenIntensity * cosAngIncidence) +
                 <title>Gaussian with Sharp Highlight</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="Gaussian%20Small%20Highlight.png"/>
+                        <imagedata fileref="Gaussian%20Small%20Highlight.png" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
