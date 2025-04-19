@@ -71,7 +71,7 @@
             <title>Basic Texture</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="Basic%20Texture.png"  contentwidth="6in"/>
+                    <imagedata  align="center" fileref="Basic%20Texture.png"  contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -378,7 +378,7 @@ gaussianTerm = cosAngIncidence != 0.0 ? gaussianTerm : 0.0;</programlisting>
                 <title>Texture Binding and Context</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="TextureBindingDiagram.svg" scalefit="1"  contentwidth="6in" />
+                        <imagedata  align="center" fileref="TextureBindingDiagram.svg" scalefit="1"  contentwidth="6in" />
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -486,7 +486,7 @@ glSamplerParameteri(g_gaussSampler, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);</progr
                 <title>Sampler Binding and Context</title>
                 <mediaobject  align="center">
                     <imageobject>
-                        <imagedata fileref="SamplerBindingDiagram.svg"  scalefit="1"  contentwidth="6in"/>
+                        <imagedata  align="center" fileref="SamplerBindingDiagram.svg"  scalefit="1"  contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -510,21 +510,21 @@ glSamplerParameteri(g_gaussSampler, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);</progr
                 in our lookup table. It is a 64-texel lookup table.</para>
             <mediaobject align="center">
                 <imageobject>
-                    <imagedata fileref="Lookup%20Low%20Resolution.png"  contentwidth="6in"/>
+                    <imagedata  align="center" fileref="Lookup%20Low%20Resolution.png"  contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
             <para>Switching to the level <keycap>3</keycap> resolution shows more gradations, and
                 looks much more like the shader calculation. This one is 256 texels across.</para>
             <mediaobject>
                     <imageobject>
-                        <imagedata fileref="Lookup%20Mid%20Resolution.png"  contentwidth="6in"/>
+                        <imagedata  align="center" fileref="Lookup%20Mid%20Resolution.png"  contentwidth="6in"/>
                     </imageobject>
             </mediaobject>
             <para>The largest resolution, <keycap>4</keycap>, is 512 texels, and it looks nearly
                 identical to the pure shader version for this object.</para>
             <mediaobject>
                     <imageobject>
-                        <imagedata fileref="Lookup%20High%20Resolution.png"  contentwidth="6in"/>
+                        <imagedata  align="center" fileref="Lookup%20High%20Resolution.png"  contentwidth="6in"/>
                     </imageobject>
             </mediaobject>
         </section>
@@ -551,7 +551,7 @@ glSamplerParameteri(g_gaussSampler, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);</progr
             <title>Projection and Interpolation</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="PerspectiveInterpolation.svg"  contentwidth="6in"/>
+                    <imagedata  align="center" fileref="PerspectiveInterpolation.svg"  contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -598,7 +598,7 @@ glSamplerParameteri(g_gaussSampler, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);</progr
             <title>Perspective Correct Interpolation</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="PerspectiveInterpolation.png"/>
+                    <imagedata  align="center" fileref="PerspectiveInterpolation.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
             <caption>
@@ -663,7 +663,7 @@ glSamplerParameteri(g_gaussSampler, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);</progr
             <title>Material Texture</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="Material%20Texture.png"  contentwidth="6in"/>
+                    <imagedata  align="center" fileref="Material%20Texture.png"  contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -876,7 +876,7 @@ glBindSampler(g_shineTexUnit, g_textureSampler);</programlisting>
                 <title>A Torus</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="Torus.png" depth="8cm"/>
+                        <imagedata  align="center" fileref="Torus.png" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -905,7 +905,7 @@ glBindSampler(g_shineTexUnit, g_textureSampler);</programlisting>
                 <title>Surface smudges</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="Material%20Flat%20Rings.png"/>
+                        <imagedata  align="center" fileref="Material%20Flat%20Rings.png" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>

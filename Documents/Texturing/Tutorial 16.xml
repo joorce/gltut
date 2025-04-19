@@ -47,7 +47,7 @@
             <title>Gamma Ramp </title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="Gamma%20Ramp.png" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="Gamma%20Ramp.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -148,7 +148,7 @@ glBindTexture(GL_TEXTURE_2D, 0);</programlisting>
             <title>Gamma Ramp with sRGB Images</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="Gamma%20Ramp%20sRGB.png" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="Gamma%20Ramp%20sRGB.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -324,7 +324,7 @@ glBindBuffer(GL_ARRAY_BUFFER, 0);</programlisting>
             <title>Gamma Checkers</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="Gamma%20Checkers.png"/>
+                    <imagedata  align="center" fileref="Gamma%20Checkers.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -348,7 +348,7 @@ glBindBuffer(GL_ARRAY_BUFFER, 0);</programlisting>
             <title>Gamma Correct with Gamma Mipmaps</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="Gamma%20Checkers%20Gamma.png"/>
+                    <imagedata  align="center" fileref="Gamma%20Checkers%20Gamma.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -376,7 +376,7 @@ glBindBuffer(GL_ARRAY_BUFFER, 0);</programlisting>
             <title>Gamma Landscape</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="Gamma%20Landscape.png" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="Gamma%20Landscape.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>

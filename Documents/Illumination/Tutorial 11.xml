@@ -37,7 +37,7 @@
             <title>Perfect Specular Reflection</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="SpecularReflection.svg" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="SpecularReflection.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -58,7 +58,7 @@
             <title>Smooth and Rough Microfacets</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="MicrofacetRoughSmooth.svg" />
+                    <imagedata  align="center" fileref="MicrofacetRoughSmooth.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -154,7 +154,7 @@
                 <title>Phong Lighting</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="Phong%20Lighting.png" contentwidth="6in"/>
+                        <imagedata  align="center" fileref="Phong%20Lighting.png" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -271,7 +271,7 @@ outputColor = (diffuseColor * attenIntensity * cosAngIncidence) +
                 <title>Phong with Dark Diffuse</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="Phong%20Dark%20Diffuse.png" contentwidth="6in"/>
+                        <imagedata  align="center" fileref="Phong%20Dark%20Diffuse.png" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -285,7 +285,7 @@ outputColor = (diffuseColor * attenIntensity * cosAngIncidence) +
                 <title>Phong Clipping</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="Phong%20Clipping.png" contentwidth="6in"/>
+                        <imagedata  align="center" fileref="Phong%20Clipping.png" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -302,7 +302,7 @@ outputColor = (diffuseColor * attenIntensity * cosAngIncidence) +
                 <title>Phong Distortion</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="Phong%20Distortion.png" contentwidth="6in"/>
+                        <imagedata  align="center" fileref="Phong%20Distortion.png" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -337,7 +337,7 @@ outputColor = (diffuseColor * attenIntensity * cosAngIncidence) +
             <title>Large View and Reflect Angle</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="PhongReflectDirTooGreat.svg" />
+                    <imagedata  align="center" fileref="PhongReflectDirTooGreat.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -354,7 +354,7 @@ outputColor = (diffuseColor * attenIntensity * cosAngIncidence) +
             <title>Geometric Half-Angle Vector</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="HalfangleVectorDiagram.svg" />
+                    <imagedata  align="center" fileref="HalfangleVectorDiagram.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -370,7 +370,7 @@ outputColor = (diffuseColor * attenIntensity * cosAngIncidence) +
             <title>Perfect Reflection Half-Angle Vector</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="HalfangleVectorPerfect.svg" />
+                    <imagedata  align="center" fileref="HalfangleVectorPerfect.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -389,7 +389,7 @@ outputColor = (diffuseColor * attenIntensity * cosAngIncidence) +
             <title>Blinn Lighting</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="Blinn%20Lighting.png" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="Blinn%20Lighting.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -433,7 +433,7 @@ outputColor = (diffuseColor * attenIntensity * cosAngIncidence) +
             <title>Blinn vs. Phong Lighting</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="Blinn%20vs%20Phong%20Compare.png"/>
+                    <imagedata  align="center" fileref="Blinn%20vs%20Phong%20Compare.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -450,7 +450,7 @@ outputColor = (diffuseColor * attenIntensity * cosAngIncidence) +
                 <title>Light Edge</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="FalseEdge.png"/>
+                        <imagedata  align="center" fileref="FalseEdge.png" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -487,7 +487,7 @@ outputColor = (diffuseColor * attenIntensity * cosAngIncidence) +
                 <title>Improved Light Edge</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="LessFalseEdge.png"/>
+                        <imagedata  align="center" fileref="LessFalseEdge.png" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -527,7 +527,7 @@ outputColor = (diffuseColor * attenIntensity * cosAngIncidence) +
             <title>Gaussian Probability Distribution Curves</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="GaussianPlot.svg" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="GaussianPlot.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -611,7 +611,7 @@ outputColor = (diffuseColor * attenIntensity * cosAngIncidence) +
                 <title>Gaussian with Sharp Highlight</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="Gaussian%20Small%20Highlight.png" contentwidth="6in"/>
+                        <imagedata  align="center" fileref="Gaussian%20Small%20Highlight.png" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>

@@ -47,7 +47,7 @@
             <title>Basic Checkerboard Plane</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="BasicCheckerboardPlane.png" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="BasicCheckerboardPlane.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -95,7 +95,7 @@ glSamplerParameteri(g_samplers[samplerIx], GL_TEXTURE_WRAP_T, GL_REPEAT);</progr
             <title>Jagged Texture Edge</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="NearestZoom.png" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="NearestZoom.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -137,7 +137,7 @@ glSamplerParameteri(g_samplers[samplerIx], GL_TEXTURE_WRAP_T, GL_REPEAT);</progr
             <title>Nearest Sampling</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="NearestSampleDiag.svg" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="NearestSampleDiag.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -160,7 +160,7 @@ glSamplerParameteri(g_samplers[1], GL_TEXTURE_MIN_FILTER, GL_LINEAR);</programli
             <title>Linear Filtering</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="CheckerboardLinear.png" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="CheckerboardLinear.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -183,7 +183,7 @@ glSamplerParameteri(g_samplers[1], GL_TEXTURE_MIN_FILTER, GL_LINEAR);</programli
             <title>Large Minification Sampling</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="LargeMinificDiag.svg" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="LargeMinificDiag.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -203,7 +203,7 @@ glSamplerParameteri(g_samplers[1], GL_TEXTURE_MIN_FILTER, GL_LINEAR);</programli
             <title>Mipmapped Minification Sampling</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="MipmapDiagram.svg" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="MipmapDiagram.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -305,7 +305,7 @@ glSamplerParameteri(g_samplers[2],
             <title>Hallway with Mipmapping</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="LinearMipmapNearest.png" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="LinearMipmapNearest.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -323,7 +323,7 @@ glSamplerParameteri(g_samplers[2],
             <title>Hallway with Special Texture</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="SpecialHallwayLMipN.png" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="SpecialHallwayLMipN.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -406,7 +406,7 @@ glPixelStorei(GL_UNPACK_ALIGNMENT, 1);</programlisting>
                 <title>Linear Mipmap Linear Comparison</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="LMipLCompare.png"/>
+                        <imagedata  align="center" fileref="LMipLCompare.png" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -470,7 +470,7 @@ glPixelStorei(GL_UNPACK_ALIGNMENT, 1);</programlisting>
             <title>Main Diagonal</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="MainDiagonal.png"/>
+                    <imagedata  align="center" fileref="MainDiagonal.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -481,7 +481,7 @@ glPixelStorei(GL_UNPACK_ALIGNMENT, 1);</programlisting>
             <title>Long Fragment Area</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="DiagonalDiagram.svg"/>
+                    <imagedata  align="center" fileref="DiagonalDiagram.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -498,7 +498,7 @@ glPixelStorei(GL_UNPACK_ALIGNMENT, 1);</programlisting>
             <title>Long Fragment with Sample Area</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="MipmapDiagonalDiagram.svg"/>
+                    <imagedata  align="center" fileref="MipmapDiagonalDiagram.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -522,7 +522,7 @@ glPixelStorei(GL_UNPACK_ALIGNMENT, 1);</programlisting>
             <title>Parallelogram Sample Area</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="ParallelogramDiag.svg"/>
+                    <imagedata  align="center" fileref="ParallelogramDiag.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -539,7 +539,7 @@ glPixelStorei(GL_UNPACK_ALIGNMENT, 1);</programlisting>
             <title>Anisotropic Filtering</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="LightAnisotropic.png" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="LightAnisotropic.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -587,7 +587,7 @@ glSamplerParameterf(g_samplers[5],
                 <title>Max Anisotropic Filtering</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="HeavyAnisotropic.png" contentwidth="6in"/>
+                        <imagedata  align="center" fileref="HeavyAnisotropic.png" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>

@@ -60,7 +60,7 @@
             <title>Surface Light Absorption</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="SurfaceColorAbsorption.svg" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="SurfaceColorAbsorption.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -86,7 +86,7 @@
             <title>Perpendicular Light</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="DirectLightColumn.svg"/>
+                    <imagedata  align="center" fileref="DirectLightColumn.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -97,7 +97,7 @@
             <title>Light at an Angle</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="AngleLightColumn.svg"/>
+                    <imagedata  align="center" fileref="AngleLightColumn.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -116,7 +116,7 @@
                 <title>Diffuse Reflectance</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="DiffuseReflection.svg" contentwidth="6in"/>
+                        <imagedata  align="center" fileref="DiffuseReflection.svg" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -196,7 +196,7 @@
                 <title>Near and Far Lights</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="NearVsFarLight.svg"/>
+                        <imagedata  align="center" fileref="NearVsFarLight.svg" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -271,7 +271,7 @@
                 <title>Basic Lighting</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="Basic%20Lighting.png" contentwidth="6in"/>
+                        <imagedata  align="center" fileref="Basic%20Lighting.png" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -555,7 +555,7 @@ void main() {
             <title>Circle Scaling</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="CircleScaling.svg" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="CircleScaling.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -564,7 +564,7 @@ void main() {
             <title>Circle Scaling with Normals</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="CircleNormalScaling.svg" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="CircleNormalScaling.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -673,7 +673,7 @@ glUseProgram(0);</programlisting>
             <title>Lighting and Scale</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="Scale%20and%20Lighting.png" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="Scale%20and%20Lighting.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -697,7 +697,7 @@ glUseProgram(0);</programlisting>
             <title>Half Lit</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="No%20Ambient.png" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="No%20Ambient.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -761,7 +761,7 @@ glUseProgram(0);</programlisting>
             <title>Ambient Lighting</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="Ambient%20Lighting.png" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="Ambient%20Lighting.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -857,7 +857,7 @@ else {
             <title>Cube Position Topology</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="CubePositionTopology.svg" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="CubePositionTopology.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -871,7 +871,7 @@ else {
             <title>Cube Normal Topology</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="CubeNormalTopology.svg" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="CubeNormalTopology.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -925,7 +925,7 @@ else {
             <title>Full Cube Topology</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="CubeTotalTopology.svg" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="CubeTotalTopology.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>

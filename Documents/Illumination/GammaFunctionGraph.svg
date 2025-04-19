@@ -1,176 +1,120 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" height="600px" width="600px" >
-	<style type="text/css" ><![CDATA[.pointer-arrow-label
-{
-	font-family: sans-serif;
-	font-size: 20px;
-	font-weight: bold;
-	stroke: none;
-	text-anchor: end;
-	fill: darksalmon;
-}
-
-.gamma-correct-dash
-{
-	stroke-dasharray: 21,6;
-}
-
-.text-right-justified
-{
-	text-anchor: end;
-}
-
-.pointer-arrow-dash
-{
-	stroke-dasharray: 14,5;
-}
-
-.pointer-arrow-marker
-{
-	stroke: none;
-	fill: darksalmon;
-}
-
-.grid-border
-{
-	stroke: grey;
-	fill: none;
-}
-
-.grid-background
-{
-	stroke: none;
-	fill: whitesmoke;
-}
-
-.grid-axis
-{
-	stroke: black;
-	stroke-width: 2px;
-	fill: none;
-}
-
-.grid-axis-label-y
-{
-	text-anchor: end;
-}
-
-.gamma-func
-{
-	stroke: red;
-	stroke-width: 4px;
-	clip-path: url(#graph-clip);
-	fill: none;
-}
-
-.grid-axis-label
-{
-	font-family: sans-serif;
-	stroke: none;
-	font-size: 15;
-	fill: black;
-}
-
-.grid-axis-label-x
-{
-	text-anchor: middle;
-}
-
-.text-left-justified
-{
-	text-anchor: start;
-}
-
-.curve-label
-{
-	font-family: sans-serif;
-	font-weight: bold;
-	stroke: none;
-	font-size: 30px;
-	fill: darkred;
-}
-
-.grid-line
-{
-	stroke: lightgrey;
-	fill: none;
-}
-
-.pointer-arrow
-{
-	marker-end: url(#arrow-head);
-	stroke-width: 3px;
-	marker-start: url(#arrow-rear);
-	stroke: darksalmon;
-	fill: none;
-}
-
-.grid-axis-hash
-{
-	stroke: black;
-	stroke-width: 0.5px;
-	fill: none;
-}
-
-.linear-rgb
-{
-	stroke: grey;
-	fill: none;
-}
-
-.grid-axis-hash
-{
-	text-anchor: end;
-}]]></style>
-	<defs >
-		<clipPath id="graph-clip" >
-			<rect y="20" x="50" height="530" width="530" />
-		</clipPath>
-		<marker markerWidth="14" markerHeight="14" refX="7" refY="7" markerUnits="userSpaceOnUse" id="arrow-rear" >
-			<circle r="7" cy="7" cx="7" class="pointer-arrow-marker" />
-		</marker>
-		<marker markerWidth="21" markerHeight="14" refX="14" refY="7" markerUnits="userSpaceOnUse" orient="auto" id="arrow-head" >
-			<polygon points="21,7 0,0 5,7 0,14" class="pointer-arrow-marker" />
-		</marker>
-	</defs>
-	<rect y="20" x="50" height="530" width="530" class="grid-background" />
-	<path d="M 50 497 L 580 497 M 50 444 L 580 444 M 50 391 L 580 391 M 50 338 L 580 338 M 50 285 L 580 285 M 50 232 L 580 232 M 50 179 L 580 179 M 50 126 L 580 126 M 50 73 L 580 73 M 315 550 L 315 20" class="grid-line" />
-	<path d="M 50 550 L 580 20" class="linear-rgb" />
-	<path d="M 50 550 L 63.25 549.84160411722 L 76.5 549.27220364006 L 89.75 548.22413213304 L 103 546.65592607425 L 116.25 544.53641255696 L 129.5 541.84025401015 L 142.75 538.54593675719 L 156 534.63467113003 L 169.25 530.08971808118 L 182.5 524.89594436717 L 195.75 519.03951209967 L 209 512.50765281704 L 222.25 505.28849755489 L 235.5 497.3709455798 L 248.75 488.74456072815 L 262 479.39948801232 L 275.25 469.32638546174 L 288.5 458.51636764931 L 301.75 446.96095833909 L 315 434.65205036326 L 328.25 421.58187130705 L 341.5 407.74295391594 L 354.75 393.12811038413 L 368 377.73040986383 L 381.25 361.54315867113 L 394.5 344.55988276744 L 407.75 326.77431217536 L 421 308.18036704987 L 434.25 288.77214517508 L 447.5 268.54391069521 L 460.75 247.49008392017 L 474 225.60523207122 L 487.25 202.88406085271 L 493.875 191.20823697066 L 500.5 179.32140675292 L 507.125 167.22294403859 L 513.75 154.912229991 L 520.375 142.38865290779 L 527 129.65160803843 L 533.625 116.70049740895 L 545.21875 93.519182994017 L 553.9140625 75.69990844817 L 560.435546875 62.090851914318 L 570.2177734375 41.282865644376 L 580 20" class="gamma-func" />
-	<path d="M 50 550 L 50.4140625 529.49267028859 L 52.0703125 507.37911782614 L 55.3828125 484.19687860467 L 58.6953125 468.16910837108 L 65.3203125 444.14110249325 L 71.9453125 425.35636982447 L 78.5703125 409.47655962466 L 85.1953125 395.50414237044 L 91.8203125 382.90503149506 L 105.0703125 360.63694211056 L 118.3203125 341.13996166989 L 131.5703125 323.61519960359 L 144.8203125 307.58441728826 L 158.0703125 292.73484161934 L 171.3203125 278.84884641253 L 184.5703125 265.76789183475 L 197.8203125 253.37231098995 L 211.0703125 241.56918924128 L 224.3203125 230.28470056364 L 237.5703125 219.45904982741 L 250.8203125 209.04301461223 L 264.0703125 198.99550925431 L 277.3203125 189.28182483423 L 290.5703125 179.87232935737 L 303.8203125 170.7414892636 L 317.0703125 161.86712032346 L 330.3203125 153.22980551523 L 343.5703125 144.81243658403 L 356.8203125 136.59984864787 L 370.0703125 128.57852579046 L 383.3203125 120.73636150232 L 396.5703125 113.06246199243 L 409.8203125 105.54698336365 L 423.0703125 98.180995797372 L 436.3203125 90.956369473194 L 449.5703125 83.865678123693 L 462.8203125 76.902117007508 L 476.0703125 70.05943275438 L 489.3203125 63.331863050344 L 502.5703125 56.714084529455 L 515.8203125 50.201167549249 L 529.0703125 43.788536771726 L 541.802734375 37.716926048365 L 560.9013671875 28.768125898226 L 580 20" class="gamma-func gamma-correct-dash" />
-	<text y="141.9" x="222.25" class="curve-label text-right-justified" ><tspan x="222.25" >gamma</tspan><tspan dy="30" x="222.25" >correction</tspan><tspan dy="30" x="222.25" >1/2.2</tspan></text>
-	<text y="351.25" x="421" class="curve-label text-left-justified" ><tspan x="421" >CRT</tspan><tspan dy="30" x="421" >gamma</tspan><tspan dy="30" x="421" >2.2</tspan></text>
-	<line x2="315" y2="423.65205036326" y1="285" x1="315" class="pointer-arrow" />
-	<line x2="165.34794963674" y2="296" y1="434.65205036326" x1="165.34794963674" class="pointer-arrow pointer-arrow-dash" />
-	<text y="285" x="300" class="pointer-arrow-label" >0.5</text>
-	<text y="434.65205036326" x="300" class="pointer-arrow-label" >0.218</text>
-	<text y="434.65205036326" x="150.34794963674" class="pointer-arrow-label" >0.218</text>
-	<text y="285" x="150.34794963674" class="pointer-arrow-label" >0.5</text>
-	<text y="575" x="50" class="grid-axis-label grid-axis-label-x" >0</text>
-	<text y="575" x="103" class="grid-axis-label grid-axis-label-x" >0.1</text>
-	<text y="575" x="156" class="grid-axis-label grid-axis-label-x" >0.2</text>
-	<text y="575" x="209" class="grid-axis-label grid-axis-label-x" >0.3</text>
-	<text y="575" x="262" class="grid-axis-label grid-axis-label-x" >0.4</text>
-	<text y="575" x="315" class="grid-axis-label grid-axis-label-x" >0.5</text>
-	<text y="575" x="368" class="grid-axis-label grid-axis-label-x" >0.6</text>
-	<text y="575" x="421" class="grid-axis-label grid-axis-label-x" >0.7</text>
-	<text y="575" x="474" class="grid-axis-label grid-axis-label-x" >0.8</text>
-	<text y="575" x="527" class="grid-axis-label grid-axis-label-x" >0.9</text>
-	<text y="575" x="580" class="grid-axis-label grid-axis-label-x" >1</text>
-	<text y="555.5" x="40" class="grid-axis-label grid-axis-label-y" >0</text>
-	<text y="502.5" x="40" class="grid-axis-label grid-axis-label-y" >0.1</text>
-	<text y="449.5" x="40" class="grid-axis-label grid-axis-label-y" >0.2</text>
-	<text y="396.5" x="40" class="grid-axis-label grid-axis-label-y" >0.3</text>
-	<text y="343.5" x="40" class="grid-axis-label grid-axis-label-y" >0.4</text>
-	<text y="290.5" x="40" class="grid-axis-label grid-axis-label-y" >0.5</text>
-	<text y="237.5" x="40" class="grid-axis-label grid-axis-label-y" >0.6</text>
-	<text y="184.5" x="40" class="grid-axis-label grid-axis-label-y" >0.7</text>
-	<text y="131.5" x="40" class="grid-axis-label grid-axis-label-y" >0.8</text>
-	<text y="78.5" x="40" class="grid-axis-label grid-axis-label-y" >0.9</text>
-	<text y="25.5" x="40" class="grid-axis-label grid-axis-label-y" >1</text>
-	<path d="M 50 550 L 50 555 M 103 550 L 103 555 M 156 550 L 156 555 M 209 550 L 209 555 M 262 550 L 262 555 M 315 550 L 315 555 M 368 550 L 368 555 M 421 550 L 421 555 M 474 550 L 474 555 M 527 550 L 527 555 M 580 550 L 580 555 M 50 550 L 45 550 M 50 497 L 45 497 M 50 444 L 45 444 M 50 391 L 45 391 M 50 338 L 45 338 M 50 285 L 45 285 M 50 232 L 45 232 M 50 179 L 45 179 M 50 126 L 45 126 M 50 73 L 45 73 M 50 20 L 45 20" class="grid-axis-hash" />
-	<path d="M 50 20 L 580 20 M 580 20 L 580 550" class="grid-border" />
-	<path d="M 50 20 L 50 550 M 50 550 L 580 550" class="grid-axis" />
+<svg width="100%" height="100%" viewBox="0 0 600 600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;">
+    <rect x="50" y="20" width="530" height="530" style="fill:rgb(245,245,245);"/>
+    <path d="M50,497L580,497M50,444L580,444M50,391L580,391M50,338L580,338M50,285L580,285M50,232L580,232M50,179L580,179M50,126L580,126M50,73L580,73M315,550L315,20" style="fill:none;fill-rule:nonzero;stroke:rgb(211,211,211);stroke-width:1px;"/>
+    <path d="M50,550L580,20" style="fill:none;fill-rule:nonzero;stroke:rgb(128,128,128);stroke-width:1px;"/>
+    <clipPath id="_clip1">
+        <rect x="50" y="20" width="530" height="530"/>
+    </clipPath>
+    <g clip-path="url(#_clip1)">
+        <path d="M50,550L63.25,549.842L76.5,549.272L89.75,548.224L103,546.656L116.25,544.536L129.5,541.84L142.75,538.546L156,534.635L169.25,530.09L182.5,524.896L195.75,519.04L209,512.508L222.25,505.288L235.5,497.371L248.75,488.745L262,479.399L275.25,469.326L288.5,458.516L301.75,446.961L315,434.652L328.25,421.582L341.5,407.743L354.75,393.128L368,377.73L381.25,361.543L394.5,344.56L407.75,326.774L421,308.18L434.25,288.772L447.5,268.544L460.75,247.49L474,225.605L487.25,202.884L493.875,191.208L500.5,179.321L507.125,167.223L513.75,154.912L520.375,142.389L527,129.652L533.625,116.7L545.219,93.519L553.914,75.7L560.436,62.091L570.218,41.283L580,20" style="fill:none;fill-rule:nonzero;stroke:rgb(255,0,0);stroke-width:4px;"/>
+    </g>
+    <clipPath id="_clip2">
+        <rect x="50" y="20" width="530" height="530"/>
+    </clipPath>
+    <g clip-path="url(#_clip2)">
+        <path d="M50,550L50.414,529.493L52.07,507.379L55.383,484.197L58.695,468.169L65.32,444.141L71.945,425.356L78.57,409.477L85.195,395.504L91.82,382.905L105.07,360.637L118.32,341.14L131.57,323.615L144.82,307.584L158.07,292.735L171.32,278.849L184.57,265.768L197.82,253.372L211.07,241.569L224.32,230.285L237.57,219.459L250.82,209.043L264.07,198.996L277.32,189.282L290.57,179.872L303.82,170.741L317.07,161.867L330.32,153.23L343.57,144.812L356.82,136.6L370.07,128.579L383.32,120.736L396.57,113.062L409.82,105.547L423.07,98.181L436.32,90.956L449.57,83.866L462.82,76.902L476.07,70.059L489.32,63.332L502.57,56.714L515.82,50.201L529.07,43.789L541.803,37.717L560.901,28.768L580,20" style="fill:none;fill-rule:nonzero;stroke:rgb(255,0,0);stroke-width:4px;stroke-dasharray:21,6;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,222.25,141.9)">
+        <g>
+            <text x="-100.17px" y="0px" style="font-family:'IBMPlexSans-Regular', 'IBM Plex Sans', sans-serif;font-size:30px;fill:rgb(139,0,0);">gamma</text>
+            <text x="-137.01px" y="30px" style="font-family:'IBMPlexSans-Regular', 'IBM Plex Sans', sans-serif;font-size:30px;fill:rgb(139,0,0);">c<tspan x="-122.1px " y="30px ">o</tspan>rr<tspan x="-83.43px " y="30px ">e</tspan>ction</text>
+            <g transform="matrix(30,0,0,30,-3.55271e-15,60)">
+            </g>
+            <text x="-73.65px" y="60px" style="font-family:'IBMPlexSans-Regular', 'IBM Plex Sans', sans-serif;font-size:30px;fill:rgb(139,0,0);">1/2.2</text>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,421,351.25)">
+        <g>
+            <text x="0px" y="0px" style="font-family:'IBMPlexSans-Regular', 'IBM Plex Sans', sans-serif;font-size:30px;fill:rgb(139,0,0);">CR<tspan x="37.11px " y="0px ">T</tspan></text>
+            <text x="0px" y="30px" style="font-family:'IBMPlexSans-Regular', 'IBM Plex Sans', sans-serif;font-size:30px;fill:rgb(139,0,0);">gamma</text>
+            <g transform="matrix(30,0,0,30,44.16,60)">
+            </g>
+            <text x="0px" y="60px" style="font-family:'IBMPlexSans-Regular', 'IBM Plex Sans', sans-serif;font-size:30px;fill:rgb(139,0,0);">2.2</text>
+        </g>
+    </g>
+    <path d="M315,285L315,423.652" style="fill:none;fill-rule:nonzero;stroke:rgb(233,150,122);stroke-width:3px;"/>
+    <path d="M165.348,434.652L165.348,296" style="fill:none;fill-rule:nonzero;stroke:rgb(233,150,122);stroke-width:3px;stroke-dasharray:14,5;"/>
+    <g transform="matrix(1,0,0,1,300,285)">
+        <text x="-29.44px" y="0px" style="font-family:'IBMPlexSans-Regular', 'IBM Plex Sans', sans-serif;font-size:20px;fill:rgb(233,150,122);">0.5</text>
+    </g>
+    <g transform="matrix(1,0,0,1,300,434.652)">
+        <text x="-53.44px" y="0px" style="font-family:'IBMPlexSans-Regular', 'IBM Plex Sans', sans-serif;font-size:20px;fill:rgb(233,150,122);">0.218</text>
+    </g>
+    <g transform="matrix(1,0,0,1,150.348,434.652)">
+        <text x="-53.44px" y="0px" style="font-family:'IBMPlexSans-Regular', 'IBM Plex Sans', sans-serif;font-size:20px;fill:rgb(233,150,122);">0.218</text>
+    </g>
+    <g transform="matrix(1,0,0,1,150.348,285)">
+        <text x="-29.44px" y="0px" style="font-family:'IBMPlexSans-Regular', 'IBM Plex Sans', sans-serif;font-size:20px;fill:rgb(233,150,122);">0.5</text>
+    </g>
+    <g transform="matrix(1,0,0,1,50,575)">
+        <text x="-4.5px" y="0px" style="font-family:'IBMPlexSans-Regular', 'IBM Plex Sans', sans-serif;font-size:15px;">0</text>
+    </g>
+    <g transform="matrix(1,0,0,1,103,575)">
+        <text x="-11.04px" y="0px" style="font-family:'IBMPlexSans-Regular', 'IBM Plex Sans', sans-serif;font-size:15px;">0.1</text>
+    </g>
+    <g transform="matrix(1,0,0,1,156,575)">
+        <text x="-11.04px" y="0px" style="font-family:'IBMPlexSans-Regular', 'IBM Plex Sans', sans-serif;font-size:15px;">0.2</text>
+    </g>
+    <g transform="matrix(1,0,0,1,209,575)">
+        <text x="-11.04px" y="0px" style="font-family:'IBMPlexSans-Regular', 'IBM Plex Sans', sans-serif;font-size:15px;">0.3</text>
+    </g>
+    <g transform="matrix(1,0,0,1,262,575)">
+        <text x="-11.04px" y="0px" style="font-family:'IBMPlexSans-Regular', 'IBM Plex Sans', sans-serif;font-size:15px;">0.4</text>
+    </g>
+    <g transform="matrix(1,0,0,1,315,575)">
+        <text x="-11.04px" y="0px" style="font-family:'IBMPlexSans-Regular', 'IBM Plex Sans', sans-serif;font-size:15px;">0.5</text>
+    </g>
+    <g transform="matrix(1,0,0,1,368,575)">
+        <text x="-11.04px" y="0px" style="font-family:'IBMPlexSans-Regular', 'IBM Plex Sans', sans-serif;font-size:15px;">0.6</text>
+    </g>
+    <g transform="matrix(1,0,0,1,421,575)">
+        <text x="-11.04px" y="0px" style="font-family:'IBMPlexSans-Regular', 'IBM Plex Sans', sans-serif;font-size:15px;">0.7</text>
+    </g>
+    <g transform="matrix(1,0,0,1,474,575)">
+        <text x="-11.04px" y="0px" style="font-family:'IBMPlexSans-Regular', 'IBM Plex Sans', sans-serif;font-size:15px;">0.8</text>
+    </g>
+    <g transform="matrix(1,0,0,1,527,575)">
+        <text x="-11.04px" y="0px" style="font-family:'IBMPlexSans-Regular', 'IBM Plex Sans', sans-serif;font-size:15px;">0.9</text>
+    </g>
+    <g transform="matrix(1,0,0,1,580,575)">
+        <text x="-4.5px" y="0px" style="font-family:'IBMPlexSans-Regular', 'IBM Plex Sans', sans-serif;font-size:15px;">1</text>
+    </g>
+    <g transform="matrix(1,0,0,1,40,555.5)">
+        <text x="-9px" y="0px" style="font-family:'IBMPlexSans-Regular', 'IBM Plex Sans', sans-serif;font-size:15px;">0</text>
+    </g>
+    <g transform="matrix(1,0,0,1,40,502.5)">
+        <text x="-22.08px" y="0px" style="font-family:'IBMPlexSans-Regular', 'IBM Plex Sans', sans-serif;font-size:15px;">0.1</text>
+    </g>
+    <g transform="matrix(1,0,0,1,40,449.5)">
+        <text x="-22.08px" y="0px" style="font-family:'IBMPlexSans-Regular', 'IBM Plex Sans', sans-serif;font-size:15px;">0.2</text>
+    </g>
+    <g transform="matrix(1,0,0,1,40,396.5)">
+        <text x="-22.08px" y="0px" style="font-family:'IBMPlexSans-Regular', 'IBM Plex Sans', sans-serif;font-size:15px;">0.3</text>
+    </g>
+    <g transform="matrix(1,0,0,1,40,343.5)">
+        <text x="-22.08px" y="0px" style="font-family:'IBMPlexSans-Regular', 'IBM Plex Sans', sans-serif;font-size:15px;">0.4</text>
+    </g>
+    <g transform="matrix(1,0,0,1,40,290.5)">
+        <text x="-22.08px" y="0px" style="font-family:'IBMPlexSans-Regular', 'IBM Plex Sans', sans-serif;font-size:15px;">0.5</text>
+    </g>
+    <g transform="matrix(1,0,0,1,40,237.5)">
+        <text x="-22.08px" y="0px" style="font-family:'IBMPlexSans-Regular', 'IBM Plex Sans', sans-serif;font-size:15px;">0.6</text>
+    </g>
+    <g transform="matrix(1,0,0,1,40,184.5)">
+        <text x="-22.08px" y="0px" style="font-family:'IBMPlexSans-Regular', 'IBM Plex Sans', sans-serif;font-size:15px;">0.7</text>
+    </g>
+    <g transform="matrix(1,0,0,1,40,131.5)">
+        <text x="-22.08px" y="0px" style="font-family:'IBMPlexSans-Regular', 'IBM Plex Sans', sans-serif;font-size:15px;">0.8</text>
+    </g>
+    <g transform="matrix(1,0,0,1,40,78.5)">
+        <text x="-22.08px" y="0px" style="font-family:'IBMPlexSans-Regular', 'IBM Plex Sans', sans-serif;font-size:15px;">0.9</text>
+    </g>
+    <g transform="matrix(1,0,0,1,40,25.5)">
+        <text x="-9px" y="0px" style="font-family:'IBMPlexSans-Regular', 'IBM Plex Sans', sans-serif;font-size:15px;">1</text>
+    </g>
+    <path d="M50,550L50,555M103,550L103,555M156,550L156,555M209,550L209,555M262,550L262,555M315,550L315,555M368,550L368,555M421,550L421,555M474,550L474,555M527,550L527,555M580,550L580,555M50,550L45,550M50,497L45,497M50,444L45,444M50,391L45,391M50,338L45,338M50,285L45,285M50,232L45,232M50,179L45,179M50,126L45,126M50,73L45,73M50,20L45,20" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:0.5px;"/>
+    <path d="M50,20L580,20M580,20L580,550" style="fill:none;fill-rule:nonzero;stroke:rgb(128,128,128);stroke-width:1px;"/>
+    <path d="M50,20L50,550M50,550L580,550" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2px;"/>
 </svg>

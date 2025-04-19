@@ -42,7 +42,7 @@
             <title>Scene Lighting</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="Scene%20Lighting.png" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="Scene%20Lighting.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -344,7 +344,7 @@ if(lightData.cameraSpaceLightPos.w == 0.0) {
                 <title>Darkness, Day vs. Night</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="DarkDayVsNight.png"/>
+                        <imagedata  align="center" fileref="DarkDayVsNight.png" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -356,7 +356,7 @@ if(lightData.cameraSpaceLightPos.w == 0.0) {
                 <title>Light Clipping</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="Light%20Clipping.png" contentwidth="6in"/>
+                        <imagedata  align="center" fileref="Light%20Clipping.png" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -436,7 +436,7 @@ if(lightData.cameraSpaceLightPos.w == 0.0) {
             <title>HDR Lighting</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="HDR%20Lighting.png" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="HDR%20Lighting.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -685,7 +685,7 @@ struct LightBlockHDR {
                 <title>Gamma Function Graph</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="GammaFunctionGraph.svg" contentwidth="6in"/>
+                        <imagedata  align="center" fileref="GammaFunctionGraph.svg" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -708,7 +708,7 @@ struct LightBlockHDR {
                 <title>Gamma Correction</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="Gamma%20Correction.png" contentwidth="6in"/>
+                        <imagedata  align="center" fileref="Gamma%20Correction.png" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -791,7 +791,7 @@ outputColor = pow(accumLighting, gamma);</programlisting>
                 <title>Gamma Lighting</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="Gamma%20Lighting.png" contentwidth="6in"/>
+                        <imagedata  align="center" fileref="Gamma%20Lighting.png" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -809,7 +809,7 @@ outputColor = pow(accumLighting, gamma);</programlisting>
                 <title>Gamma Shadow Details</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="Gamma%20Compare.png"/>
+                        <imagedata  align="center" fileref="Gamma%20Compare.png" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>

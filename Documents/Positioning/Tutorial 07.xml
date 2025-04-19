@@ -87,7 +87,7 @@
                 <title>Full Vertex Transformation Pipeline</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="TransformPipeline.svg" contentwidth="6in"/>
+                        <imagedata  align="center" fileref="TransformPipeline.svg" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -100,7 +100,7 @@
                 <title>World Space Scene</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="World%20Scene.png" contentwidth="6in"/>
+                        <imagedata  align="center" fileref="World%20Scene.png" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -332,7 +332,7 @@ glUseProgram(0);</programlisting>
                 <title>Spherical Coordinates</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="Coord_system_SZ_0.svg" contentwidth="6in"/>
+                        <imagedata  align="center" fileref="Coord_system_SZ_0.svg" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -572,7 +572,7 @@ glEnable(GL_DEPTH_TEST);</programlisting>
             <title>Triangle Fan</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="TriangleFan.svg" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="TriangleFan.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -592,7 +592,7 @@ glEnable(GL_DEPTH_TEST);</programlisting>
             <title>Triangle Strip</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata  fileref="TriangleStrip.svg" contentwidth="6in"/>
+                    <imagedata  align="center"  fileref="TriangleStrip.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -611,7 +611,7 @@ glEnable(GL_DEPTH_TEST);</programlisting>
             <title>Triangle Strips with Winding Order</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata  fileref="StripWindingOrder.svg" contentwidth="6in"/>
+                    <imagedata  align="center"  fileref="StripWindingOrder.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -860,7 +860,7 @@ glBindBuffer(GL_UNIFORM_BUFFER, 0);</programlisting>
                 <title>Uniform Buffer and Block Binding Points</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="UBOContextBinding.svg" contentwidth="6in"/>
+                        <imagedata  align="center" fileref="UBOContextBinding.svg" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>

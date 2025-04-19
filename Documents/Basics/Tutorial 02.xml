@@ -75,7 +75,7 @@ void main() {
             <title>Fragment Position</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="FragmentPosition.png" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="FragmentPosition.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -144,7 +144,7 @@ void main() {
                 <title>Vertex Array Memory Map</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="MemoryDiagram.svg" contentwidth="6in"/>
+                        <imagedata  align="center" fileref="MemoryDiagram.svg" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -282,7 +282,7 @@ float *colorAttribArray[4] = (float *[4])(&(bufferObject + 48));]]></programlist
                     <title>Multiple Vertex Attributes</title>
                     <mediaobject>
                         <imageobject>
-                            <imagedata fileref="VertexShaderTwoAttributes.svg"/>
+                            <imagedata  align="center" fileref="VertexShaderTwoAttributes.svg" contentwidth="6in"/>
                         </imageobject>
                     </mediaobject>
                 </figure>

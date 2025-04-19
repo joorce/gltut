@@ -1,61 +1,39 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" height="301px" width="301px" >
-	<style type="text/css" ><![CDATA[.baryPts
-{
-	stroke-opacity: 0.5;
-	stroke: violet;
-	stroke-width: 4px;
-	fill: none;
-}
-
-.triangle
-{
-	fill: none;
-	stroke: black;
-}
-
-.vertex
-{
-	fill: black;
-	stroke: black;
-}
-
-.label
-{
-	font-family: monospace;
-	font-size: 25px;
-	stroke: none;
-	text-anchor: middle;
-	fill: black;
-}
-
-.vertex_label
-{
-	font-family: monospace;
-	font-size: 25px;
-	font-weight: bold;
-	stroke: none;
-	text-anchor: middle;
-	fill: black;
-}]]></style>
-	<defs >
-		<g id="g_point" >
-			<circle r="5" cy="0" cx="0" class="vertex" />
-		</g>
-	</defs>
-	<polygon points="180,45 255,195 45,240" class="triangle" />
-	<path d="M 159.9999999 159.9999999 L 180 45 M 159.9999999 159.9999999 L 255 195 M 159.9999999 159.9999999 L 45 240" class="baryPts" />
-	<use xlink:href="#g_point" y="45" x="180" height="10" width="10" />
-	<use xlink:href="#g_point" y="195" x="255" height="10" width="10" />
-	<use xlink:href="#g_point" y="240" x="45" height="10" width="10" />
-	<use xlink:href="#g_point" y="159.9999999" x="159.9999999" height="10" width="10" />
-	<text y="184.9999999" x="159.9999999" class="vertex_label" >P</text>
-	<text y="110.49999995" x="181.99999995" class="label" >&#x03b1;</text>
-	<text y="168.49999995" x="216.49999995" class="label" >&#x03b2;</text>
-	<text y="186.99999995" x="102.49999995" class="label" >&#x03b3;</text>
-	<text y="40" x="195" class="vertex_label" >A</text>
-	<text y="200" x="273" class="vertex_label" >B</text>
-	<text y="250" x="27" class="vertex_label" >C</text>
+<svg width="100%" height="100%" viewBox="0 0 301 301" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;">
+    <path d="M180,45L255,195L45,240L180,45Z" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1px;"/>
+    <path d="M160,160L180,45M160,160L255,195M160,160L45,240" style="fill:none;fill-rule:nonzero;stroke:rgb(238,130,238);stroke-opacity:0.5;stroke-width:4px;"/>
+    <g id="g_point" transform="matrix(1,0,0,1,180,45)">
+        <circle cx="0" cy="0" r="5" style="stroke:black;stroke-width:1px;"/>
+    </g>
+    <g id="g_point1" serif:id="g_point" transform="matrix(1,0,0,1,255,195)">
+        <circle cx="0" cy="0" r="5" style="stroke:black;stroke-width:1px;"/>
+    </g>
+    <g id="g_point2" serif:id="g_point" transform="matrix(1,0,0,1,45,240)">
+        <circle cx="0" cy="0" r="5" style="stroke:black;stroke-width:1px;"/>
+    </g>
+    <g id="g_point3" serif:id="g_point" transform="matrix(1,0,0,1,160,160)">
+        <circle cx="0" cy="0" r="5" style="stroke:black;stroke-width:1px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,160,185)">
+        <text x="-7.575px" y="0px" style="font-family:'IBMPlexSans-Regular', 'IBM Plex Sans', sans-serif;font-size:25px;">P</text>
+    </g>
+    <g transform="matrix(1,0,0,1,182,110.5)">
+        <text x="-8.05px" y="0px" style="font-family:'IBMPlexSans-Regular', 'IBM Plex Sans', sans-serif;font-size:25px;">α</text>
+    </g>
+    <g transform="matrix(1,0,0,1,216.5,168.5)">
+        <text x="-7.3px" y="0px" style="font-family:'IBMPlexSans-Regular', 'IBM Plex Sans', sans-serif;font-size:25px;">β</text>
+    </g>
+    <g transform="matrix(1,0,0,1,102.5,187)">
+        <text x="-6.275px" y="0px" style="font-family:'IBMPlexSans-Regular', 'IBM Plex Sans', sans-serif;font-size:25px;">γ</text>
+    </g>
+    <g transform="matrix(1,0,0,1,195,40)">
+        <text x="-8.012px" y="0px" style="font-family:'IBMPlexSans-Regular', 'IBM Plex Sans', sans-serif;font-size:25px;">A</text>
+    </g>
+    <g transform="matrix(1,0,0,1,273,200)">
+        <text x="-8.162px" y="0px" style="font-family:'IBMPlexSans-Regular', 'IBM Plex Sans', sans-serif;font-size:25px;">B</text>
+    </g>
+    <g transform="matrix(1,0,0,1,27,250)">
+        <text x="-7.763px" y="0px" style="font-family:'IBMPlexSans-Regular', 'IBM Plex Sans', sans-serif;font-size:25px;">C</text>
+    </g>
 </svg>

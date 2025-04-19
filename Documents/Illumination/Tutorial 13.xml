@@ -50,7 +50,7 @@
             <title>Basic Impostor</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="Basic%20Impostor.png" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="Basic%20Impostor.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -275,7 +275,7 @@ void main() {
                 <title>Circle Point Computation</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="CirclePythagorean.svg" />
+                        <imagedata  align="center" fileref="CirclePythagorean.svg"  contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -311,7 +311,7 @@ void main() {
             <title>Bad Impostor</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="Impostor%20No%20Perspective.png"/>
+                    <imagedata  align="center" fileref="Impostor%20No%20Perspective.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -329,7 +329,7 @@ void main() {
             <title>Circle Projection</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="CircleInPerspective.svg" />
+                    <imagedata  align="center" fileref="CircleInPerspective.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -413,7 +413,7 @@ void main() {
                 <title>Bad vs. Good</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="Bad%20vs%20Good%20Impostor2.png"/>
+                        <imagedata  align="center" fileref="Bad%20vs%20Good%20Impostor2.png" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -463,7 +463,7 @@ void main() {
             <informalfigure>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="CircleInPerspective.svg" />
+                        <imagedata  align="center" fileref="CircleInPerspective.svg" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </informalfigure>
@@ -487,7 +487,7 @@ void main() {
             <title>Bad Intersection</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="Bad%20Impostor%20Intersection.png"  contentwidth="6in"/>
+                    <imagedata  align="center" fileref="Bad%20Impostor%20Intersection.png"  contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -506,7 +506,7 @@ void main() {
             <title>Depth Correct Impostor</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="Depth%20Correct%20Impostor.png"/>
+                    <imagedata  align="center" fileref="Depth%20Correct%20Impostor.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>

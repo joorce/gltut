@@ -30,7 +30,7 @@
             <title>Position Vectors</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="VectorPosition.svg" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="VectorPosition.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -42,7 +42,7 @@
             <title>Direction Vectors</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="VectorDirections.svg" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="VectorDirections.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -79,7 +79,7 @@
             <title>Vector Addition</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="VectorAddition.svg" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="VectorAddition.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -90,7 +90,7 @@
             <title>Vector Addition Head-to-Tail</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="VectorAdditionHeads.svg" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="VectorAdditionHeads.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -112,7 +112,7 @@
             <title>Vector Negation</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="VectorNegation.svg" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="VectorNegation.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -127,7 +127,7 @@
             <title>Vector Subtraction</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="VectorSubtraction.svg" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="VectorSubtraction.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -154,7 +154,7 @@
             <title>Vector Scaling</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="VectorScalarMult.svg" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="VectorScalarMult.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -243,7 +243,7 @@
             <title>An Image</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="PixelImage.svg" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="PixelImage.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -366,7 +366,7 @@
                 <title>Normalized Device Coordinate Space</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="NormDeviceCoord.svg" contentwidth="6in"/>
+                        <imagedata  align="center" fileref="NormDeviceCoord.svg" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -404,7 +404,7 @@
                 <title>Scan Converted Triangle</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="TriangleScanConvert.svg" contentwidth="6in"/>
+                        <imagedata  align="center" fileref="TriangleScanConvert.svg" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -423,7 +423,7 @@
                 <title>Shared Edge Scan Conversion</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="SharedEdgeScanConvert.svg" contentwidth="6in"/>
+                        <imagedata  align="center" fileref="SharedEdgeScanConvert.svg" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>

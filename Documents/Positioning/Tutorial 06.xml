@@ -46,7 +46,7 @@
             <title>Two 2D Coordinate Systems</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="CoordSys2D.svg" />
+                    <imagedata  align="center" fileref="CoordSys2D.svg" />
                 </imageobject>
             </mediaobject>
         </figure>
@@ -129,7 +129,7 @@
             <title>Coordinate System Translation in 2D</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="TranslationTransform.svg" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="TranslationTransform.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -267,7 +267,7 @@ const float fFrustumScale = CalcFrustumScale(45.0f);</programlisting>
             <title>Translation Project</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="Translations.png" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="Translations.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -282,7 +282,7 @@ const float fFrustumScale = CalcFrustumScale(45.0f);</programlisting>
             <title>Coordinate System Scaling in 2D</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="ScaleTransform.svg" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="ScaleTransform.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -341,7 +341,7 @@ const float fFrustumScale = CalcFrustumScale(45.0f);</programlisting>
             <title>Scale Project</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="Scales.png" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="Scales.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -414,7 +414,7 @@ const float fFrustumScale = CalcFrustumScale(45.0f);</programlisting>
             <title>Coordinate Rotation in 2D</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="RotationTransform.svg" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="RotationTransform.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -500,7 +500,7 @@ const float fFrustumScale = CalcFrustumScale(45.0f);</programlisting>
             <title>Rotation Project</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="Rotations.png" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="Rotations.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -593,7 +593,7 @@ gl_Position = cameraToClipMatrix * temp;</programlisting>
                 <title>Transform Order Diagram</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="TransOrderGeom.svg" contentwidth="6in"/>
+                        <imagedata  align="center" fileref="TransOrderGeom.svg" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -710,7 +710,7 @@ gl_Position = cameraToClipMatrix * temp;</programlisting>
                 <title>Hierarchy Project</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="Robot%20Arm.png" contentwidth="6in"/>
+                        <imagedata  align="center" fileref="Robot%20Arm.png" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>

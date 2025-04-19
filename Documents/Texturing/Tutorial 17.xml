@@ -27,7 +27,7 @@
             <title>Double Projection</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="DoubleProjection.png" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="DoubleProjection.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -59,7 +59,7 @@
             <title>Top View Projection</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="ProjectTopView.png"  contentwidth="6in"/>
+                    <imagedata  align="center" fileref="ProjectTopView.png"  contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -77,7 +77,7 @@
             <title>Near View Projection</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="ProjectCloseObject.png" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="ProjectCloseObject.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -394,7 +394,7 @@ glEnable(GL_DEPTH_CLAMP);</programlisting>
             <title>Projected Light</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="Projected%20Light.png"/>
+                    <imagedata  align="center" fileref="Projected%20Light.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -511,7 +511,7 @@ currLight.lightIntensity =
                 <title>Back Projected Light</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="LightBackProjection.png"/>
+                        <imagedata  align="center" fileref="LightBackProjection.png" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -539,7 +539,7 @@ currLight.lightIntensity =
                 <title>Colored Spotlight</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="ColoredProjectLights.png"/>
+                        <imagedata  align="center" fileref="ColoredProjectLights.png" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -560,7 +560,7 @@ currLight.lightIntensity =
                 <title>Edge Clamped Light</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="EdgeClampLight.png"/>
+                        <imagedata  align="center" fileref="EdgeClampLight.png" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -583,7 +583,7 @@ glSamplerParameterfv(g_samplers[1], GL_TEXTURE_BORDER_COLOR, color);</programlis
                 <title>Border Clamped Light</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="BorderClampLight.png"/>
+                        <imagedata  align="center" fileref="BorderClampLight.png" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -643,7 +643,7 @@ glSamplerParameterfv(g_samplers[1], GL_TEXTURE_BORDER_COLOR, color);</programlis
             <title>Cube Map Face Orientation</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="CubeMapAxes.svg"/>
+                    <imagedata  align="center" fileref="CubeMapAxes.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -673,7 +673,7 @@ glSamplerParameterfv(g_samplers[1], GL_TEXTURE_BORDER_COLOR, color);</programlis
             <title>Cube Point Light</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="Cube%20Point%20Light.png"/>
+                    <imagedata  align="center" fileref="Cube%20Point%20Light.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>

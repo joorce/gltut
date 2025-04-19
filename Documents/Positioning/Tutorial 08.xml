@@ -52,7 +52,7 @@
             <title>Gimbal Lock Project</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="Three%20Gimbal%20Array.png" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="Three%20Gimbal%20Array.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -73,7 +73,7 @@
             <title>Parallel Gimbals</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="In%20Gimbal%20Lock.png" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="In%20Gimbal%20Lock.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -259,7 +259,7 @@
                 <title>Quaternion YPR Project</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="Quaternion%20YPR.png" contentwidth="6in"/>
+                        <imagedata  align="center" fileref="Quaternion%20YPR.png" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -482,7 +482,7 @@
                 <title>Camera Relative Project</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="Camera%20Relative.png" contentwidth="6in"/>
+                        <imagedata  align="center" fileref="Camera%20Relative.png" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -583,7 +583,7 @@
                 <title>Interpolation Directions</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="InterpolateDirection.svg" />
+                        <imagedata  align="center" fileref="InterpolateDirection.svg" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>

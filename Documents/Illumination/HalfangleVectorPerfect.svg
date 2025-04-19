@@ -1,69 +1,25 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" height="150px" width="400px" >
-	<style type="text/css" ><![CDATA[.point
-{
-	fill: black;
-	stroke: none;
-}
-
-.src_arrowhead
-{
-	fill: black;
-	stroke: black;
-}
-
-.dir_arrowhead
-{
-	fill: green;
-	stroke: green;
-}
-
-.normal_direction
-{
-	marker-end: url(#dir_arrow);
-	stroke: green;
-	stroke-width: 1px;
-}
-
-.label
-{
-	font-size: 14pt;
-	stroke: none;
-	text-anchor: middle;
-	fill: black;
-}
-
-.surface
-{
-	fill: lightblue;
-	stroke: none;
-}
-
-.src_direction
-{
-	marker-end: url(#src_arrow);
-	stroke: black;
-	stroke-width: 1px;
-}]]></style>
-	<defs >
-		<marker markerWidth="10" markerHeight="8" refX="10" refY="4" markerUnits="userSpaceOnUse" orient="auto" id="dir_arrow" >
-			<path d="M 10 4 L 0 0 L 0 8 Z" class="dir_arrowhead" />
-		</marker>
-		<marker markerWidth="10" markerHeight="8" refX="10" refY="4" markerUnits="userSpaceOnUse" orient="auto" id="src_arrow" >
-			<path d="M 10 4 L 0 0 L 0 8 Z" class="src_arrowhead" />
-		</marker>
-	</defs>
-	<rect y="112.5" x="0" height="37.5" width="400" class="surface" />
-	<line x2="200" y2="37.5" y1="112.5" x1="200" class="src_direction" />
-	<line x2="68.75" y2="75" y1="112.5" x1="200" class="src_direction" />
-	<line x2="331.25" y2="75" y1="112.5" x1="200" class="src_direction" />
-	<line x2="272.11429607306" y2="91.895915407697" y1="112.5" x1="200" class="normal_direction" />
-	<line x2="200" y2="37.5" y1="112.5" x1="200" class="normal_direction" />
-	<text y="37.5" x="210" class="label" >N</text>
-	<text y="79" x="58.75" class="label" >L</text>
-	<text y="75" x="339.25" class="label" >V</text>
-	<text y="83.895915407697" x="276.11429607306" class="label" >R</text>
-	<text y="37.5" x="190" class="label" >H</text>
+<svg width="100%" height="100%" viewBox="0 0 400 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;">
+    <rect x="0" y="112.5" width="400" height="37.5" style="fill:rgb(173,216,230);"/>
+    <path d="M200,112.5L200,37.5" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1px;"/>
+    <path d="M200,112.5L68.75,75" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1px;"/>
+    <path d="M200,112.5L331.25,75" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1px;"/>
+    <path d="M200,112.5L272.114,91.896" style="fill:none;fill-rule:nonzero;stroke:rgb(0,128,0);stroke-width:1px;"/>
+    <path d="M200,112.5L200,37.5" style="fill:none;fill-rule:nonzero;stroke:rgb(0,128,0);stroke-width:1px;"/>
+    <g transform="matrix(1,0,0,1,210,37.5)">
+        <text x="-4.949px" y="0px" style="font-family:'IBMPlexSans-Regular', 'IBM Plex Sans', sans-serif;font-size:14px;">N</text>
+    </g>
+    <g transform="matrix(1,0,0,1,58.75,79)">
+        <text x="-3.507px" y="0px" style="font-family:'IBMPlexSans-Regular', 'IBM Plex Sans', sans-serif;font-size:14px;">L</text>
+    </g>
+    <g transform="matrix(1,0,0,1,339.25,75)">
+        <text x="-4.263px" y="0px" style="font-family:'IBMPlexSans-Regular', 'IBM Plex Sans', sans-serif;font-size:14px;">V</text>
+    </g>
+    <g transform="matrix(1,0,0,1,276.114,83.8959)">
+        <text x="-4.48px" y="0px" style="font-family:'IBMPlexSans-Regular', 'IBM Plex Sans', sans-serif;font-size:14px;">R</text>
+    </g>
+    <g transform="matrix(1,0,0,1,190,37.5)">
+        <text x="-4.949px" y="0px" style="font-family:'IBMPlexSans-Regular', 'IBM Plex Sans', sans-serif;font-size:14px;">H</text>
+    </g>
 </svg>

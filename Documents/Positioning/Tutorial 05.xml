@@ -338,7 +338,7 @@ void glDrawElements(GLenum type, GLint count, GLenum type, GLsizeiptr indices) {
                 <title>Overlapping Objects</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="Overlap%20No%20Depth.png" contentwidth="6in"/>
+                        <imagedata  align="center" fileref="Overlap%20No%20Depth.png" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -531,7 +531,7 @@ glUseProgram(0);</programlisting>
         <informalfigure>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="Overlap%20No%20Depth.png" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="Overlap%20No%20Depth.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </informalfigure>
@@ -564,7 +564,7 @@ glUseProgram(0);</programlisting>
             <title>Three Overlapping Triangles</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="ThreeTriangleOverlap.svg" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="ThreeTriangleOverlap.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -760,7 +760,7 @@ glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);</programlisting>
                 <title>Depth Buffering</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="Depth%20Buffering.png" contentwidth="6in"/>
+                        <imagedata  align="center" fileref="Depth%20Buffering.png" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -775,7 +775,7 @@ glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);</programlisting>
                 <title>Mild Overlap</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="Depth%20Buffering%20Mild%20Overlap.png"
+                        <imagedata  align="center" fileref="Depth%20Buffering%20Mild%20Overlap.png"
                              contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
@@ -787,7 +787,7 @@ glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);</programlisting>
                 <title>Major Overlap</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="Depth%20Buffering%20Major%20Overlap.png"
+                        <imagedata  align="center" fileref="Depth%20Buffering%20Major%20Overlap.png"
                              contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
@@ -849,7 +849,7 @@ glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);</programlisting>
             <title>Triangle Clipping</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata  fileref="TriangleClipping.svg" contentwidth="6in"/>
+                    <imagedata  align="center"  fileref="TriangleClipping.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -861,7 +861,7 @@ glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);</programlisting>
             <title>Near Plane Clipping</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="Vertex%20Clipping.png" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="Vertex%20Clipping.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -917,7 +917,7 @@ glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);</programlisting>
         <informalfigure>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="Vertex%20Clipping.png" contentwidth="4in"/>
+                    <imagedata  align="center" fileref="Vertex%20Clipping.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </informalfigure>
@@ -969,7 +969,7 @@ glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);</programlisting>
             <title>Depth Clamping</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="Depth%20Clamping.png" contentwidth="4in"/>
+                    <imagedata  align="center" fileref="Depth%20Clamping.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -980,7 +980,7 @@ glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);</programlisting>
             <title>Depth Clamp With Overlap</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="Double%20Depth%20Clamping.png" contentwidth="4in"/>
+                    <imagedata  align="center" fileref="Double%20Depth%20Clamping.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -1026,7 +1026,7 @@ glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);</programlisting>
                 <title>2D Camera to NDC Space</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="CameraToPerspective.svg"  contentwidth="6in"
+                        <imagedata  align="center" fileref="CameraToPerspective.svg"  contentwidth="6in"
                         />
                     </imageobject>
                 </mediaobject>

@@ -40,7 +40,7 @@
             <title>Vertex Point Lighting</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="Vertex%20Point%20Lighting.png" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="Vertex%20Point%20Lighting.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -131,7 +131,7 @@ void main() {
             <title>Light Near Surface</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="LightNearSurface.svg" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="LightNearSurface.svg" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -242,7 +242,7 @@ void main() {
             <title>Triangle Interpolation</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="BarycentricTriangle.svg" />
+                    <imagedata  align="center" fileref="BarycentricTriangle.svg"  contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -258,7 +258,7 @@ void main() {
             <title>Triangle Edge Interpolation</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="BarycentricTriangleEdge.svg" />
+                    <imagedata  align="center" fileref="BarycentricTriangleEdge.svg"  contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -276,7 +276,7 @@ void main() {
             <title>Two Triangle Quadrilateral</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="TwoTriangleQuad.svg" />
+                    <imagedata  align="center" fileref="TwoTriangleQuad.svg"  contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -287,7 +287,7 @@ void main() {
             <title>Two Triangle Interpolation</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="TwoTriangleInterpolation.svg" />
+                    <imagedata  align="center" fileref="TwoTriangleInterpolation.svg"  contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -322,7 +322,7 @@ void main() {
             <title>Fragment Point Lighting</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="Fragment%20Point%20Lighting.png" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="Fragment%20Point%20Lighting.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -492,7 +492,7 @@ void main() {
                 <title>Close Lit Cylinder</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="Cylinder%20Close%20Light.png" contentwidth="6in"/>
+                        <imagedata  align="center" fileref="Cylinder%20Close%20Light.png" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -514,7 +514,7 @@ void main() {
                 <title>Adjacent Gradient</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="GradientIssue.svg"/>
+                        <imagedata  align="center" fileref="GradientIssue.svg" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -530,7 +530,7 @@ void main() {
                 <title>Gradient Intensity Plot</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="GradientDiagram.svg"/>
+                        <imagedata  align="center" fileref="GradientDiagram.svg" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -562,7 +562,7 @@ void main() {
             <title>High Light</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="High%20Light.png" contentwidth="6in"/>
+                    <imagedata  align="center" fileref="High%20Light.png" contentwidth="6in"/>
                 </imageobject>
             </mediaobject>
         </figure>
@@ -742,7 +742,7 @@ void main() {
                 <title>Fragment Attenuation</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="Fragment%20Attenuation.png" contentwidth="6in"/>
+                        <imagedata  align="center" fileref="Fragment%20Attenuation.png" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>

@@ -344,7 +344,7 @@ void main() {
                 <title>Data Flow to Vertex Shader</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="VertexShaderDataFlow.svg" contentwidth="6in"/>
+                        <imagedata  align="center" fileref="VertexShaderDataFlow.svg" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -397,7 +397,7 @@ void main() {
                 <title>Data Flow to Rasterizer</title>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="RasterizerDataFlow.svg" contentwidth="6in"/>
+                        <imagedata  align="center" fileref="RasterizerDataFlow.svg" contentwidth="6in"/>
                     </imageobject>
                 </mediaobject>
             </figure>
